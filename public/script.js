@@ -1,18 +1,17 @@
 const BOOT_LINES = [
-  "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL",
+  "VAULT STOCKROOM TERMLINK PROTOCOL",
   "INITIALIZING VENDOR DATABASE...",
-  "LOADING CONFIG.JSON... OK",
-  "LOADING ITEMS.JSON... OK",
+  "LOADING CATALOG... OK",
   "CONNECTION ESTABLISHED",
 ];
 
-let STATE = { config: null, items: null, filterText: "", showUnavailable: false };
+let STATE = { site: null, sections: [], items: [], filterText: "", showUnavailable: false };
 
 function typeBoot(cb) {
+  if (window.VS_THEME && window.VS_THEME.family() !== "terminal") { cb(); return; }
   const el = document.getElementById("boot");
-  let out = "";
-  let li = 0;
-  function nextLine() {
+  let out = "", li = 0;
+  (function nextLine() {
     if (li >= BOOT_LINES.length) {
       out += "\n> READY_";
       el.innerHTML = out.replace(/(READY_)/, '<span class="ready">$1</span>');
@@ -23,21 +22,20 @@ function typeBoot(cb) {
     el.textContent = out;
     li++;
     setTimeout(nextLine, 90);
-  }
-  nextLine();
+  })();
 }
 
 async function loadData() {
-  const [config, items] = await Promise.all([
-    fetch("data/config.json").then(r => r.json()),
-    fetch("data/items.json").then(r => r.json()),
-  ]);
-  STATE.config = config;
-  STATE.items = items;
+  const res = await fetch("/api/catalog");
+  if (!res.ok) throw new Error("catalog request failed (" + res.status + ")");
+  const data = await res.json();
+  STATE.site = data.site || {};
+  STATE.sections = data.sections || [];
+  STATE.items = data.items || [];
 }
 
 function renderHeader() {
-  const c = STATE.config;
+  const c = STATE.site;
   document.getElementById("campName").textContent = c.campName || "CAMP NAME";
   document.getElementById("ign").textContent = c.inGameName || "-";
   document.getElementById("discord").textContent = c.discord || "-";
@@ -48,11 +46,6 @@ function renderHeader() {
   document.getElementById("navRow").style.display = "";
   document.getElementById("controls").style.display = "";
   document.getElementById("lastUpdated").textContent = "LOADED " + new Date().toLocaleString();
-
-  if (c.contact && c.contact.enabled) {
-    document.getElementById("contactLink").style.display = "";
-  }
-
   const banner = document.getElementById("tradeBanner");
   if (c.trade) {
     if (c.trade.acceptingCaps === false) {
@@ -70,133 +63,98 @@ function renderHeader() {
 function updateCartBar() {
   const list = cartLoad();
   const bar = document.getElementById("cartBar");
-  const count = document.getElementById("cartCount");
-  if (list.length > 0) {
-    bar.classList.add("visible");
-    count.textContent = list.length + (list.length === 1 ? " ITEM SELECTED" : " ITEMS SELECTED");
-  } else {
-    bar.classList.remove("visible");
-  }
+  bar.classList.toggle("visible", list.length > 0);
+  document.getElementById("cartCount").textContent = list.length + (list.length === 1 ? " ITEM SELECTED" : " ITEMS SELECTED");
 }
 
 function onSelectToggle(item, checked) {
-  if (checked) cartAdd(item);
-  else cartRemove(item.id);
+  if (checked) cartAdd(item); else cartRemove(item.id);
   updateCartBar();
+}
+
+function sectionHead(idx, title, avail, total) {
+  const head = document.createElement("div");
+  head.className = "section-head";
+  const i = document.createElement("span"); i.className = "idx"; i.textContent = String(idx).padStart(2, "0");
+  const t = document.createElement("span"); t.className = "section-title"; t.textContent = title.toUpperCase();
+  const c = document.createElement("span"); c.className = "section-count"; c.textContent = avail + " / " + total + " AVAILABLE";
+  head.append(i, t, c);
+  return head;
+}
+
+function subhead(text) {
+  const d = document.createElement("div");
+  d.className = "subhead";
+  d.textContent = text;
+  return d;
 }
 
 function renderCatalog() {
   const root = document.getElementById("catalog");
   root.innerHTML = "";
-  const selectedIds = cartIds();
   const opts = {
     editable: false,
     showUnavailable: STATE.showUnavailable,
     filterText: STATE.filterText,
     selectable: true,
-    selectedIds,
+    selectedIds: cartIds(),
     onSelectToggle,
   };
   const show = STATE.showUnavailable;
+  let idx = 0;
 
-  // ---- MODS ----
-  const modTotals = modTotalCount(STATE.items.mods);
-  if (modTotals.available > 0 || show) {
-    const modsSection = document.createElement("section");
-    modsSection.className = "section";
-    modsSection.innerHTML = `
-      <div class="section-head">
-        <span class="idx">01</span>
-        <span class="section-title">MODS</span>
-        <span class="section-count">${modTotals.available} / ${modTotals.total} AVAILABLE</span>
-      </div>
-    `;
-    if (STATE.config.modsNote) {
-      const p = document.createElement("p");
-      p.className = "note";
-      p.textContent = STATE.config.modsNote;
-      modsSection.appendChild(p);
-    }
-
-    const modTypes = [
-      { type: "weapon", label: "WEAPON MODS" },
-      { type: "armor", label: "ARMOR MODS" },
-      { type: "powerArmor", label: "POWER ARMOR MODS" },
-    ];
-    for (const mt of modTypes) {
-      const counts = modCountForType(STATE.items.mods, mt.type);
-      if (counts.total === 0) continue;
-      if (counts.available === 0 && !show) continue;
-      const label = document.createElement("div");
-      label.className = "subhead";
-      label.textContent = mt.label + ` (${counts.available}/${counts.total})`;
-      modsSection.appendChild(label);
-      const div = document.createElement("div");
-      div.className = "mod-group";
-      modsSection.appendChild(div);
-      renderModSection(div, STATE.items.mods, { ...opts, modType: mt.type });
-    }
-    root.appendChild(modsSection);
-  }
-
-  // ---- WEAPONS (split into categories) ----
-  const wTotal = countAvailable(STATE.items.weapons);
-  if (wTotal > 0 || show) {
-    const weaponsSection = document.createElement("section");
-    weaponsSection.className = "section";
-    weaponsSection.innerHTML = `
-      <div class="section-head">
-        <span class="idx">02</span>
-        <span class="section-title">WEAPONS</span>
-        <span class="section-count">${wTotal} / ${STATE.items.weapons.length} AVAILABLE</span>
-      </div>
-    `;
-    for (const cat of WEAPON_CATEGORIES) {
-      const counts = categoryCount(STATE.items.weapons, cat.key);
-      if (counts.total === 0) continue;
-      if (counts.available === 0 && !show) continue;
-      const label = document.createElement("div");
-      label.className = "subhead";
-      label.textContent = cat.label + ` (${counts.available}/${counts.total})`;
-      weaponsSection.appendChild(label);
-      const grid = document.createElement("div");
-      grid.className = "item-grid";
-      weaponsSection.appendChild(grid);
-      const catList = STATE.items.weapons.filter(it => (it.categories || []).includes(cat.key));
-      renderItemGrid(grid, catList, opts);
-    }
-    root.appendChild(weaponsSection);
-  }
-
-  // ---- ARMOR / UNDER ARMOR / APPAREL / MUTATION SERUMS ----
-  const groups = [
-    { key: "armor", title: "ARMOR", idx: "03" },
-    { key: "underarmor", title: "UNDER ARMOR", idx: "04" },
-    { key: "apparel", title: "APPAREL", idx: "05" },
-    { key: "serums", title: "MUTATION SERUMS", idx: "06" },
-  ];
-  for (const g of groups) {
-    const list = STATE.items[g.key];
-    if (!list) continue;
+  for (const sec of STATE.sections) {
+    const list = STATE.items.filter(it => it.section === sec.id);
     const avail = countAvailable(list);
     if (avail === 0 && !show) continue;
     const section = document.createElement("section");
     section.className = "section";
-    section.innerHTML = `
-      <div class="section-head">
-        <span class="idx">${g.idx}</span>
-        <span class="section-title">${g.title}</span>
-        <span class="section-count">${avail} / ${list.length} AVAILABLE</span>
-      </div>
-    `;
-    const grid = document.createElement("div");
-    grid.className = "item-grid";
-    section.appendChild(grid);
-    renderItemGrid(grid, list, opts);
+
+    if (sec.id === "mods") {
+      const byTier = { "1": [], "2": [], "3": [], "4": [] };
+      for (const it of list) if (byTier[it.tier]) byTier[it.tier].push({ ...it, appliesTo: it.appliesTo || [] });
+      section.appendChild(sectionHead(++idx, sec.title, avail, list.length));
+      if (STATE.site.modsNote) {
+        const p = document.createElement("p");
+        p.className = "note";
+        p.textContent = STATE.site.modsNote;
+        section.appendChild(p);
+      }
+      for (const mt of [
+        { type: "weapon", label: "WEAPON MODS" },
+        { type: "armor", label: "ARMOR MODS" },
+        { type: "powerArmor", label: "POWER ARMOR MODS" },
+      ]) {
+        const counts = modCountForType(byTier, mt.type);
+        if (counts.total === 0 || (counts.available === 0 && !show)) continue;
+        section.appendChild(subhead(`${mt.label} (${counts.available}/${counts.total})`));
+        const div = document.createElement("div");
+        div.className = "mod-group";
+        section.appendChild(div);
+        renderModSection(div, byTier, { ...opts, modType: mt.type });
+      }
+    } else if (sec.id === "weapons") {
+      section.appendChild(sectionHead(++idx, sec.title, avail, list.length));
+      for (const cat of WEAPON_CATEGORIES) {
+        const counts = categoryCount(list, cat.key);
+        if (counts.total === 0 || (counts.available === 0 && !show)) continue;
+        section.appendChild(subhead(`${cat.label} (${counts.available}/${counts.total})`));
+        const grid = document.createElement("div");
+        grid.className = "item-grid";
+        section.appendChild(grid);
+        renderItemGrid(grid, list.filter(it => (it.categories || []).includes(cat.key)), opts);
+      }
+    } else {
+      section.appendChild(sectionHead(++idx, sec.title, avail, list.length));
+      const grid = document.createElement("div");
+      grid.className = "item-grid";
+      section.appendChild(grid);
+      renderItemGrid(grid, list, opts);
+    }
     root.appendChild(section);
   }
 
-  if (root.children.length === 0) {
+  if (!root.children.length) {
     const p = document.createElement("p");
     p.className = "note";
     p.textContent = show
@@ -207,36 +165,29 @@ function renderCatalog() {
 }
 
 function attachControls() {
-  document.getElementById("search").addEventListener("input", e => {
-    STATE.filterText = e.target.value;
-    renderCatalog();
-  });
-  const cb = document.getElementById("showUnavailable");
-  cb.addEventListener("change", e => {
+  document.getElementById("search").addEventListener("input", e => { STATE.filterText = e.target.value; renderCatalog(); });
+  document.getElementById("showUnavailable").addEventListener("change", e => {
     STATE.showUnavailable = e.target.checked;
     document.getElementById("toggleLabel").classList.toggle("active", e.target.checked);
     renderCatalog();
   });
-  document.getElementById("cartClearBtn").addEventListener("click", () => {
-    cartClear();
-    updateCartBar();
-    renderCatalog();
-  });
-  document.getElementById("cartReviewBtn").addEventListener("click", () => {
-    window.location.href = "contact.html";
-  });
+  document.getElementById("cartClearBtn").addEventListener("click", () => { cartClear(); updateCartBar(); renderCatalog(); });
+  document.getElementById("cartReviewBtn").addEventListener("click", () => { window.location.href = "contact.html"; });
 }
 
-(async function init() {
+(function init() {
   typeBoot(async () => {
     try {
       await loadData();
       renderHeader();
+      if (window.showNoticeIfNeeded) window.showNoticeIfNeeded(STATE.site);
       renderCatalog();
       attachControls();
       updateCartBar();
     } catch (err) {
-      document.getElementById("boot").textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
+      const bootEl = document.getElementById("boot");
+      bootEl.classList.add("show-error");
+      bootEl.textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
       console.error(err);
     }
   });

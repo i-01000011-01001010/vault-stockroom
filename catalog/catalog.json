@@ -1,0 +1,3736 @@
+{
+ "schema": 1,
+ "version": "2026.11.15",
+ "aliases": {
+  "m1-weightless": "m1-heavyweight"
+ },
+ "items": [
+  {
+   "id": "m1-adrenal",
+   "section": "mods",
+   "name": "Adrenal",
+   "tier": 1,
+   "material": "1 Adrenal Reaction Serum",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+10% damage per kill while on a kill streak",
+    "armor": "+10 Damage and Energy Resistance per kill while on a kill streak (max 10 stacks)",
+    "powerArmor": "+10 Damage and Energy Resistance per kill while on a kill streak (max 10 stacks)"
+   }
+  },
+  {
+   "id": "m1-antiarmor",
+   "section": "mods",
+   "name": "Anti-Armor",
+   "tier": 1,
+   "material": "5 Black Titanium",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% armor penetration"
+   }
+  },
+  {
+   "id": "m1-aristocrats",
+   "section": "mods",
+   "name": "Aristocrat's",
+   "tier": 1,
+   "material": "1 Bobblehead: Caps",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "Up to +50% damage, scaling with caps held",
+    "armor": "Reflects a portion of incoming damage back at the attacker, scaling with caps held",
+    "powerArmor": "Reflects a portion of incoming damage back at the attacker, scaling with caps held"
+   }
+  },
+  {
+   "id": "m1-assassins",
+   "section": "mods",
+   "name": "Assassin's",
+   "tier": 1,
+   "material": "1 Liquid Courage",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Human enemies",
+    "armor": "-15% damage taken from Human enemies",
+    "powerArmor": "-15% damage taken from Human enemies"
+   }
+  },
+  {
+   "id": "m1-auto-stim",
+   "section": "mods",
+   "name": "Auto Stim",
+   "tier": 1,
+   "material": "5 Stimpak",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Automatically uses a Stimpak when health drops to 25% (60s cooldown)",
+    "powerArmor": "Automatically uses a Stimpak when health drops to 25% (60s cooldown)"
+   }
+  },
+  {
+   "id": "m1-berserkers",
+   "section": "mods",
+   "name": "Berserker's",
+   "tier": 1,
+   "material": "5 Psycho",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +50% damage as your Damage Resistance decreases"
+   }
+  },
+  {
+   "id": "m1-bloodied",
+   "section": "mods",
+   "name": "Bloodied",
+   "tier": 1,
+   "material": "1 Adrenal Reaction Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +130% damage as your health decreases"
+   }
+  },
+  {
+   "id": "m1-bolstering",
+   "section": "mods",
+   "name": "Bolstering",
+   "tier": 1,
+   "material": "5 Med-X",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Up to +10% Damage/Energy Resistance the lower your health is",
+    "powerArmor": "Up to +10% Damage/Energy Resistance the lower your health is"
+   }
+  },
+  {
+   "id": "m1-chameleon",
+   "section": "mods",
+   "name": "Chameleon",
+   "tier": 1,
+   "material": "1 Chameleon Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Turns you invisible while sneaking and not moving",
+    "powerArmor": "Turns you invisible while sneaking and not moving"
+   }
+  },
+  {
+   "id": "m1-cloaking",
+   "section": "mods",
+   "name": "Cloaking",
+   "tier": 1,
+   "material": "1 Stealth Boy",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Being hit in melee has a chance to turn you invisible (30s cooldown)",
+    "powerArmor": "Being hit in melee has a chance to turn you invisible (30s cooldown)"
+   }
+  },
+  {
+   "id": "m1-executioners",
+   "section": "mods",
+   "name": "Executioner's",
+   "tier": 1,
+   "material": "25 Leather",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% damage to targets below 40% health"
+   }
+  },
+  {
+   "id": "m1-exterminators",
+   "section": "mods",
+   "name": "Exterminator's",
+   "tier": 1,
+   "material": "1 Bloodbug Proboscis + 1 Stingwing Barb",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Mirelurks and Insects",
+    "armor": "-15% damage taken from Mirelurks and Insects",
+    "powerArmor": "-15% damage taken from Mirelurks and Insects"
+   }
+  },
+  {
+   "id": "m1-ferals",
+   "section": "mods",
+   "name": "Feral's",
+   "tier": 1,
+   "material": "5 Black Titanium",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "(Ghoul characters) kills make you go feral faster (melee only)"
+   }
+  },
+  {
+   "id": "m1-furious",
+   "section": "mods",
+   "name": "Furious",
+   "tier": 1,
+   "material": "1 Fury",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+5% damage per Onslaught stack (up to 9 stacks)"
+   }
+  },
+  {
+   "id": "m1-ghoul-slayers",
+   "section": "mods",
+   "name": "Ghoul Slayer's",
+   "tier": 1,
+   "material": "1 RadShield",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Ghouls",
+    "armor": "-15% damage taken from Ghouls",
+    "powerArmor": "-15% damage taken from Ghouls"
+   }
+  },
+  {
+   "id": "m1-gourmands",
+   "section": "mods",
+   "name": "Gourmand's",
+   "tier": 1,
+   "material": "1 Vegetarian Ham",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +40% damage as hunger and thirst are satisfied"
+   }
+  },
+  {
+   "id": "m1-heavyweight",
+   "section": "mods",
+   "name": "Heavyweight",
+   "tier": 1,
+   "material": "1 Bird Bones Serum",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "Up to +10% Damage/Energy Resistance the more encumbered you are"
+   },
+   "notes": "formerly named Weightless; armor only, does not apply to power armor"
+  },
+  {
+   "id": "m1-hunters",
+   "section": "mods",
+   "name": "Hunter's",
+   "tier": 1,
+   "material": "1 Yao Guai Hide",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Animals",
+    "armor": "-15% damage taken from Animals",
+    "powerArmor": "-15% damage taken from Animals"
+   }
+  },
+  {
+   "id": "m1-instigating",
+   "section": "mods",
+   "name": "Instigating",
+   "tier": 1,
+   "material": "5 Whiskey",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% damage vs targets above 60% health"
+   }
+  },
+  {
+   "id": "m1-juggernauts",
+   "section": "mods",
+   "name": "Juggernaut's",
+   "tier": 1,
+   "material": "5 Buffout",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +100% damage as your health increases"
+   }
+  },
+  {
+   "id": "m1-junkies",
+   "section": "mods",
+   "name": "Junkie's",
+   "tier": 1,
+   "material": "5 Mentats",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +100% damage, scaling with active addictions"
+   }
+  },
+  {
+   "id": "m1-life-saving",
+   "section": "mods",
+   "name": "Life Saving",
+   "tier": 1,
+   "material": "5 Stimpak",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "50% chance to auto-revive with a Stimpak on death (60s cooldown)"
+   }
+  },
+  {
+   "id": "m1-lucid",
+   "section": "mods",
+   "name": "Lucid",
+   "tier": 1,
+   "material": "1 Bobblehead: Medicine",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "(Ghoul characters) damage and resistance scale with the feral meter",
+    "armor": "(Ghoul characters) damage and resistance scale with the feral meter",
+    "powerArmor": "(Ghoul characters) damage and resistance scale with the feral meter"
+   }
+  },
+  {
+   "id": "m1-medics",
+   "section": "mods",
+   "name": "Medic's",
+   "tier": 1,
+   "material": "1 Bobblehead: Medicine",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Attacks heal nearby friendly targets for 5% of damage dealt"
+   }
+  },
+  {
+   "id": "m1-mutant-slayers",
+   "section": "mods",
+   "name": "Mutant Slayer's",
+   "tier": 1,
+   "material": "1 Super Mutant Head",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Super Mutants",
+    "armor": "-15% damage taken from Super Mutants",
+    "powerArmor": "-15% damage taken from Super Mutants"
+   }
+  },
+  {
+   "id": "m1-mutants",
+   "section": "mods",
+   "name": "Mutant's",
+   "tier": 1,
+   "material": "10 Asbestos",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "Up to +50% damage while mutated",
+    "armor": "Up to +5% Damage/Energy Resistance while mutated",
+    "powerArmor": "Up to +5% Damage/Energy Resistance while mutated"
+   }
+  },
+  {
+   "id": "m1-nocturnal",
+   "section": "mods",
+   "name": "Nocturnal",
+   "tier": 1,
+   "material": "10 Nuclear Material",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage while cloaked",
+    "armor": "+4 Perception and Agility while cloaked",
+    "powerArmor": "+4 Perception and Agility while cloaked"
+   }
+  },
+  {
+   "id": "m1-overeaters",
+   "section": "mods",
+   "name": "Overeater's",
+   "tier": 1,
+   "material": "1 Perfect Bubblegum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Up to +40 max health as hunger and thirst are satisfied",
+    "powerArmor": "Up to +40 max health as hunger and thirst are satisfied"
+   }
+  },
+  {
+   "id": "m1-quad",
+   "section": "mods",
+   "name": "Quad",
+   "tier": 1,
+   "material": "1 Fusion Core",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+300% ammo capacity (ranged only)"
+   }
+  },
+  {
+   "id": "m1-regenerating",
+   "section": "mods",
+   "name": "Regenerating",
+   "tier": 1,
+   "material": "1 Healing Factor Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+0.5% health regeneration rate",
+    "powerArmor": "+0.5% health regeneration rate"
+   }
+  },
+  {
+   "id": "m1-snipers",
+   "section": "mods",
+   "name": "Sniper's",
+   "tier": 1,
+   "material": "1 Bobblehead: Perception",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+100% damage to distant targets (ranged only)"
+   }
+  },
+  {
+   "id": "m1-stalkers",
+   "section": "mods",
+   "name": "Stalker's",
+   "tier": 1,
+   "material": "1 Calmex",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+100% sneak attack damage (ranged only)"
+   }
+  },
+  {
+   "id": "m1-suppressors",
+   "section": "mods",
+   "name": "Suppressor's",
+   "tier": 1,
+   "material": "1 Grounded Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Reduces target's damage output by 25% for 5 seconds on hit"
+   }
+  },
+  {
+   "id": "m1-troubleshooters",
+   "section": "mods",
+   "name": "Troubleshooter's",
+   "tier": 1,
+   "material": "10 Circuitry",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Robots",
+    "armor": "-15% damage taken from Robots",
+    "powerArmor": "-15% damage taken from Robots"
+   }
+  },
+  {
+   "id": "m1-two-shot",
+   "section": "mods",
+   "name": "Two Shot",
+   "tier": 1,
+   "material": "20 Lead",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Fires an extra projectile, +75% damage, worse accuracy and recoil (ranged only)"
+   }
+  },
+  {
+   "id": "m1-unyielding",
+   "section": "mods",
+   "name": "Unyielding",
+   "tier": 1,
+   "material": "5 X-Cell",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "Up to +3 to all SPECIAL stats except Endurance at low health"
+   }
+  },
+  {
+   "id": "m1-vampires",
+   "section": "mods",
+   "name": "Vampire's",
+   "tier": 1,
+   "material": "10 Blood Pack",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Restores 2% of damage dealt as health over 2 seconds"
+   }
+  },
+  {
+   "id": "m1-vanguards",
+   "section": "mods",
+   "name": "Vanguard's",
+   "tier": 1,
+   "material": "5 Blood Pack",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Up to +6% Damage/Energy Resistance as your health increases",
+    "powerArmor": "Up to +6% Damage/Energy Resistance as your health increases"
+   }
+  },
+  {
+   "id": "m1-zealots",
+   "section": "mods",
+   "name": "Zealot's",
+   "tier": 1,
+   "material": "10 Ultracite",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "+50% damage to Scorched",
+    "armor": "-15% damage taken from Scorched",
+    "powerArmor": "-15% damage taken from Scorched"
+   }
+  },
+  {
+   "id": "m2-agility",
+   "section": "mods",
+   "name": "Agility",
+   "tier": 2,
+   "material": "Bobblehead: Agility",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Agility",
+    "powerArmor": "+2 Agility"
+   }
+  },
+  {
+   "id": "m2-antiseptic",
+   "section": "mods",
+   "name": "Antiseptic",
+   "tier": 2,
+   "material": "10 Disease Cure",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+25% reduced chance of catching a disease from hazards",
+    "powerArmor": "+25% reduced chance of catching a disease from hazards"
+   }
+  },
+  {
+   "id": "m2-bashers",
+   "section": "mods",
+   "name": "Basher's",
+   "tier": 2,
+   "material": "25 Concrete",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% bash attack damage (ranged only)"
+   }
+  },
+  {
+   "id": "m2-charisma",
+   "section": "mods",
+   "name": "Charisma",
+   "tier": 2,
+   "material": "Bobblehead: Charisma",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Charisma",
+    "powerArmor": "+2 Charisma"
+   }
+  },
+  {
+   "id": "m2-crippling",
+   "section": "mods",
+   "name": "Crippling",
+   "tier": 2,
+   "material": "5 Black Titanium",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% limb damage"
+   }
+  },
+  {
+   "id": "m2-cryologists",
+   "section": "mods",
+   "name": "Cryologist's",
+   "tier": 2,
+   "material": "10 Floater Freezer Pus Sac",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+20% Cryo damage"
+   }
+  },
+  {
+   "id": "m2-elementalist",
+   "section": "mods",
+   "name": "Elementalist",
+   "tier": 2,
+   "material": "Bobblehead: Endurance",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+25 to all damage resistances",
+    "powerArmor": "+25 to all damage resistances"
+   }
+  },
+  {
+   "id": "m2-endurance",
+   "section": "mods",
+   "name": "Endurance",
+   "tier": 2,
+   "material": "Bobblehead: Endurance",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Endurance",
+    "powerArmor": "+2 Endurance"
+   }
+  },
+  {
+   "id": "m2-explosive",
+   "section": "mods",
+   "name": "Explosive",
+   "tier": 2,
+   "material": "Bobblehead: Explosive",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Projectiles explode on impact for +20% weapon damage (ranged only)"
+   }
+  },
+  {
+   "id": "m2-fierce",
+   "section": "mods",
+   "name": "Fierce",
+   "tier": 2,
+   "material": "Bobblehead: Strength",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Fortifies limb resistance based on kill streak",
+    "powerArmor": "Fortifies limb resistance based on kill streak"
+   }
+  },
+  {
+   "id": "m2-fireproof",
+   "section": "mods",
+   "name": "Fireproof",
+   "tier": 2,
+   "material": "10 Floater Flamer Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+50 Fire Resistance",
+    "powerArmor": "+50 Fire Resistance"
+   }
+  },
+  {
+   "id": "m2-glutton",
+   "section": "mods",
+   "name": "Glutton",
+   "tier": 2,
+   "material": "1 Perfect Bubblegum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Hunger and thirst grow 10% slower",
+    "powerArmor": "Hunger and thirst grow 10% slower"
+   }
+  },
+  {
+   "id": "m2-hardy",
+   "section": "mods",
+   "name": "Hardy",
+   "tier": 2,
+   "material": "Bobblehead: Explosive",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Take 7% less explosion damage",
+    "powerArmor": "Take 7% less explosion damage"
+   }
+  },
+  {
+   "id": "m2-hazmat",
+   "section": "mods",
+   "name": "HazMat",
+   "tier": 2,
+   "material": "10 Rad-X",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+50 Radiation Resistance",
+    "powerArmor": "+50 Radiation Resistance"
+   }
+  },
+  {
+   "id": "m2-heavy-hitters",
+   "section": "mods",
+   "name": "Heavy Hitter's",
+   "tier": 2,
+   "material": "25 Concrete",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+40% power attack damage (melee only)"
+   }
+  },
+  {
+   "id": "m2-hitmans",
+   "section": "mods",
+   "name": "Hitman's",
+   "tier": 2,
+   "material": "10 Fiber Optics",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+25% damage while aiming (ranged only)"
+   }
+  },
+  {
+   "id": "m2-inertial",
+   "section": "mods",
+   "name": "Inertial",
+   "tier": 2,
+   "material": "10 Canned Coffee",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Replenishes 15 Action Points with each kill"
+   }
+  },
+  {
+   "id": "m2-intelligence",
+   "section": "mods",
+   "name": "Intelligence",
+   "tier": 2,
+   "material": "Bobblehead: Intelligence",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Intelligence",
+    "powerArmor": "+2 Intelligence"
+   }
+  },
+  {
+   "id": "m2-last-shot",
+   "section": "mods",
+   "name": "Last Shot",
+   "tier": 2,
+   "material": "15 Gunpowder",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "25% chance the last round in the magazine deals +100% damage (ranged only)"
+   }
+  },
+  {
+   "id": "m2-luck",
+   "section": "mods",
+   "name": "Luck",
+   "tier": 2,
+   "material": "Bobblehead: Luck",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Luck",
+    "powerArmor": "+2 Luck"
+   }
+  },
+  {
+   "id": "m2-pain-killer",
+   "section": "mods",
+   "name": "Pain Killer",
+   "tier": 2,
+   "material": "Bobblehead: Medicine",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Gain health over time while on a kill streak",
+    "powerArmor": "Gain health over time while on a kill streak"
+   }
+  },
+  {
+   "id": "m2-perception",
+   "section": "mods",
+   "name": "Perception",
+   "tier": 2,
+   "material": "Bobblehead: Perception",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Perception",
+    "powerArmor": "+2 Perception"
+   }
+  },
+  {
+   "id": "m2-pick-pocketers",
+   "section": "mods",
+   "name": "Pick Pocketer's",
+   "tier": 2,
+   "material": "Bobblehead: Caps",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Kills have a 50% chance to grant bonus caps (melee only)"
+   }
+  },
+  {
+   "id": "m2-poisoners",
+   "section": "mods",
+   "name": "Poisoner's",
+   "tier": 2,
+   "material": "10 Floater Gnasher Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+50 Poison Resistance",
+    "powerArmor": "+50 Poison Resistance"
+   }
+  },
+  {
+   "id": "m2-powered",
+   "section": "mods",
+   "name": "Powered",
+   "tier": 2,
+   "material": "10 Canned Coffee",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+5% Action Point regeneration",
+    "powerArmor": "+5% Action Point regeneration"
+   }
+  },
+  {
+   "id": "m2-pyro-technicians",
+   "section": "mods",
+   "name": "Pyro-Technician's",
+   "tier": 2,
+   "material": "10 Floater Flamer Pus Sac",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+20% Fire damage"
+   }
+  },
+  {
+   "id": "m2-rapid",
+   "section": "mods",
+   "name": "Rapid",
+   "tier": 2,
+   "material": "1 Speed Demon Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+25% fire rate or +40% melee attack speed"
+   }
+  },
+  {
+   "id": "m2-riposting",
+   "section": "mods",
+   "name": "Riposting",
+   "tier": 2,
+   "material": "25 Glass",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% blocked damage reflected back at the attacker (melee only)"
+   }
+  },
+  {
+   "id": "m2-rushing",
+   "section": "mods",
+   "name": "Rushing",
+   "tier": 2,
+   "material": "Bobblehead: Agility",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Gain Action Points over time while on a kill streak",
+    "powerArmor": "Gain Action Points over time while on a kill streak"
+   }
+  },
+  {
+   "id": "m2-steady",
+   "section": "mods",
+   "name": "Steady",
+   "tier": 2,
+   "material": "3 Orange Mentats",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+25% melee damage while not moving (melee only)"
+   }
+  },
+  {
+   "id": "m2-strength",
+   "section": "mods",
+   "name": "Strength",
+   "tier": 2,
+   "material": "Bobblehead: Strength",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+2 Strength",
+    "powerArmor": "+2 Strength"
+   }
+  },
+  {
+   "id": "m2-vats-enhanced",
+   "section": "mods",
+   "name": "V.A.T.S. Enhanced",
+   "tier": 2,
+   "material": "3 Berry Mentats",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% chance to hit in V.A.T.S. (ranged only)"
+   }
+  },
+  {
+   "id": "m2-vital",
+   "section": "mods",
+   "name": "Vital",
+   "tier": 2,
+   "material": "1 Eagle Eyes Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% critical damage"
+   }
+  },
+  {
+   "id": "m2-warming",
+   "section": "mods",
+   "name": "Warming",
+   "tier": 2,
+   "material": "10 Floater Freezer Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+50 Cryo Resistance",
+    "powerArmor": "+50 Cryo Resistance"
+   }
+  },
+  {
+   "id": "m3-acrobats",
+   "section": "mods",
+   "name": "Acrobat's",
+   "tier": 3,
+   "material": "1 Marsupial Serum",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "-50% fall damage"
+   }
+  },
+  {
+   "id": "m3-active",
+   "section": "mods",
+   "name": "Active",
+   "tier": 3,
+   "material": "Bobblehead: Agility",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+20 max Action Points",
+    "powerArmor": "+20 max Action Points"
+   }
+  },
+  {
+   "id": "m3-adamantium",
+   "section": "mods",
+   "name": "Adamantium",
+   "tier": 3,
+   "material": "1 Twisted Muscles Serum",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "Take 15% less limb damage"
+   }
+  },
+  {
+   "id": "m3-agility",
+   "section": "mods",
+   "name": "Agility",
+   "tier": 3,
+   "material": "Bobblehead: Agility",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Agility"
+   }
+  },
+  {
+   "id": "m3-arms-keepers",
+   "section": "mods",
+   "name": "Arms Keeper's",
+   "tier": 3,
+   "material": "Bobblehead: Small Guns",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Weapon weights reduced by 20%",
+    "powerArmor": "Weapon weights reduced by 20%"
+   }
+  },
+  {
+   "id": "m3-barbarian",
+   "section": "mods",
+   "name": "Barbarian",
+   "tier": 3,
+   "material": "Bobblehead: Melee",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+1 Strength per kill while on a kill streak (max 10) (melee only)"
+   }
+  },
+  {
+   "id": "m3-belted",
+   "section": "mods",
+   "name": "Belted",
+   "tier": 3,
+   "material": "25 Lead",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Ammo weight reduced by 20%",
+    "powerArmor": "Ammo weight reduced by 20%"
+   }
+  },
+  {
+   "id": "m3-blocker",
+   "section": "mods",
+   "name": "Blocker",
+   "tier": 3,
+   "material": "10 Oil",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "15% more damage blocked while blocking (melee only)"
+   }
+  },
+  {
+   "id": "m3-burning",
+   "section": "mods",
+   "name": "Burning",
+   "tier": 3,
+   "material": "15 Floater Flamer Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "5% chance to deal 12 fire damage/sec to melee attackers",
+    "powerArmor": "5% chance to deal 12 fire damage/sec to melee attackers"
+   }
+  },
+  {
+   "id": "m3-cavaliers",
+   "section": "mods",
+   "name": "Cavalier's",
+   "tier": 3,
+   "material": "10 Oil",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "-10% damage taken while sprinting",
+    "powerArmor": "-10% damage taken while sprinting"
+   }
+  },
+  {
+   "id": "m3-charisma",
+   "section": "mods",
+   "name": "Charisma",
+   "tier": 3,
+   "material": "Bobblehead: Charisma",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Charisma"
+   }
+  },
+  {
+   "id": "m3-defenders",
+   "section": "mods",
+   "name": "Defender's",
+   "tier": 3,
+   "material": "25 Steel",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "40% auto-block chance (melee only)",
+    "armor": "5% auto-block chance",
+    "powerArmor": "5% auto-block chance"
+   }
+  },
+  {
+   "id": "m3-dissipating",
+   "section": "mods",
+   "name": "Dissipating",
+   "tier": 3,
+   "material": "10 RadAway",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+0.25% radiation damage recovery rate",
+    "powerArmor": "+0.25% radiation damage recovery rate"
+   }
+  },
+  {
+   "id": "m3-divers",
+   "section": "mods",
+   "name": "Diver's",
+   "tier": 3,
+   "material": "15 Plastic",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "Lets you breathe underwater"
+   }
+  },
+  {
+   "id": "m3-doctors",
+   "section": "mods",
+   "name": "Doctor's",
+   "tier": 3,
+   "material": "1 Stimpak: Super",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+5% effectiveness of Stimpaks, RadAway, and Rad-X",
+    "powerArmor": "+5% effectiveness of Stimpaks, RadAway, and Rad-X"
+   }
+  },
+  {
+   "id": "m3-durability",
+   "section": "mods",
+   "name": "Durability",
+   "tier": 3,
+   "material": "Bobblehead: Repair",
+   "appliesTo": [
+    "weapon",
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "weapon": "Item breaks 50% slower",
+    "armor": "Item breaks 50% slower",
+    "powerArmor": "Item breaks 50% slower"
+   }
+  },
+  {
+   "id": "m3-electrified",
+   "section": "mods",
+   "name": "Electrified",
+   "tier": 3,
+   "material": "1 Electrically Charged Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "5% chance to deal 12 energy damage/sec to melee attackers",
+    "powerArmor": "5% chance to deal 12 energy damage/sec to melee attackers"
+   }
+  },
+  {
+   "id": "m3-endurance",
+   "section": "mods",
+   "name": "Endurance",
+   "tier": 3,
+   "material": "Bobblehead: Endurance",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Endurance"
+   }
+  },
+  {
+   "id": "m3-frozen",
+   "section": "mods",
+   "name": "Frozen",
+   "tier": 3,
+   "material": "15 Floater Freezer Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "5% chance to deal 12 cryo damage/sec to melee attackers",
+    "powerArmor": "5% chance to deal 12 cryo damage/sec to melee attackers"
+   }
+  },
+  {
+   "id": "m3-ghosts",
+   "section": "mods",
+   "name": "Ghost's",
+   "tier": 3,
+   "material": "1 Stealth Boy",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "10% chance to turn invisible for 2s on hit (ranged only)"
+   }
+  },
+  {
+   "id": "m3-glowing",
+   "section": "mods",
+   "name": "Glowing",
+   "tier": 3,
+   "material": "Bobblehead: Science",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "(Ghoul) kills raise your glow meter / (Human) raise your radiation"
+   }
+  },
+  {
+   "id": "m3-healthy",
+   "section": "mods",
+   "name": "Healthy",
+   "tier": 3,
+   "material": "Bobblehead: Endurance",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+20 max health",
+    "powerArmor": "+20 max health"
+   }
+  },
+  {
+   "id": "m3-intelligence",
+   "section": "mods",
+   "name": "Intelligence",
+   "tier": 3,
+   "material": "Bobblehead: Intelligence",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Intelligence"
+   }
+  },
+  {
+   "id": "m3-lightweight",
+   "section": "mods",
+   "name": "Lightweight",
+   "tier": 3,
+   "material": "10 Cork",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Weight reduced by 90%"
+   }
+  },
+  {
+   "id": "m3-luck",
+   "section": "mods",
+   "name": "Luck",
+   "tier": 3,
+   "material": "Bobblehead: Luck",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Luck"
+   }
+  },
+  {
+   "id": "m3-lucky",
+   "section": "mods",
+   "name": "Lucky",
+   "tier": 3,
+   "material": "Bobblehead: Luck",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+15 bonus V.A.T.S. critical charge"
+   }
+  },
+  {
+   "id": "m3-nimble",
+   "section": "mods",
+   "name": "Nimble",
+   "tier": 3,
+   "material": "25 Springs",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+100% movement speed while aiming (ranged only)"
+   }
+  },
+  {
+   "id": "m3-pack-rats",
+   "section": "mods",
+   "name": "Pack Rat's",
+   "tier": 3,
+   "material": "1 Marsupial Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Junk item weights reduced by 20%",
+    "powerArmor": "Junk item weights reduced by 20%"
+   }
+  },
+  {
+   "id": "m3-perception",
+   "section": "mods",
+   "name": "Perception",
+   "tier": 3,
+   "material": "Bobblehead: Perception",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Perception"
+   }
+  },
+  {
+   "id": "m3-reflex",
+   "section": "mods",
+   "name": "Reflex",
+   "tier": 3,
+   "material": "Bobblehead: Agility",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "+2% chance to evade attacks"
+   }
+  },
+  {
+   "id": "m3-resilient",
+   "section": "mods",
+   "name": "Resilient",
+   "tier": 3,
+   "material": "5 Med-X",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+500 Damage/Energy Resistance while reloading (ranged only)"
+   }
+  },
+  {
+   "id": "m3-safecrackers",
+   "section": "mods",
+   "name": "Safecracker's",
+   "tier": 3,
+   "material": "Bobblehead: Lock Picking",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+1 Lockpicking and +1 Hacking skill",
+    "powerArmor": "+1 Lockpicking and +1 Hacking skill"
+   }
+  },
+  {
+   "id": "m3-secret-agents",
+   "section": "mods",
+   "name": "Secret Agent's",
+   "tier": 3,
+   "material": "Bobblehead: Sneak",
+   "appliesTo": [
+    "armor"
+   ],
+   "effects": {
+    "armor": "+25% quieter sneaking, -25% detection distance"
+   }
+  },
+  {
+   "id": "m3-sentinels",
+   "section": "mods",
+   "name": "Sentinel's",
+   "tier": 3,
+   "material": "1 Scaly Skin Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "-5% damage taken while standing still",
+    "powerArmor": "-5% damage taken while standing still"
+   }
+  },
+  {
+   "id": "m3-steadfast",
+   "section": "mods",
+   "name": "Steadfast",
+   "tier": 3,
+   "material": "5 Ballistic Fiber",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50 Damage/Energy Resistance while aiming (ranged only)"
+   }
+  },
+  {
+   "id": "m3-strength",
+   "section": "mods",
+   "name": "Strength",
+   "tier": 3,
+   "material": "Bobblehead: Strength",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+3 Strength"
+   }
+  },
+  {
+   "id": "m3-swift",
+   "section": "mods",
+   "name": "Swift",
+   "tier": 3,
+   "material": "1 Speed Demon Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+15% reload speed (ranged only)"
+   }
+  },
+  {
+   "id": "m3-thruhikers",
+   "section": "mods",
+   "name": "Thru-hiker's",
+   "tier": 3,
+   "material": "10 Purified Water",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Food, drink, and chem weights reduced by 20%",
+    "powerArmor": "Food, drink, and chem weights reduced by 20%"
+   }
+  },
+  {
+   "id": "m3-toxic",
+   "section": "mods",
+   "name": "Toxic",
+   "tier": 3,
+   "material": "15 Floater Gnasher Pus Sac",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "5% chance to deal 12 poison damage/sec to melee attackers",
+    "powerArmor": "5% chance to deal 12 poison damage/sec to melee attackers"
+   }
+  },
+  {
+   "id": "m3-vats-optimized",
+   "section": "mods",
+   "name": "V.A.T.S. Optimized",
+   "tier": 3,
+   "material": "10 Sugar",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "V.A.T.S. Action Point cost reduced by 35%"
+   }
+  },
+  {
+   "id": "m4-aegis",
+   "section": "mods",
+   "name": "Aegis",
+   "tier": 4,
+   "material": "5 Circuitry",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "+50 Physical/Energy and +20 Poison/Cryo/Fire resistance for your team within 50ft"
+   }
+  },
+  {
+   "id": "m4-battleloaders",
+   "section": "mods",
+   "name": "Battle-Loader's",
+   "tier": 4,
+   "material": "1 Talons Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "15% chance of an instant reload when bashing (up to 75% stacked)",
+    "powerArmor": "15% chance of an instant reload when bashing (up to 75% stacked)"
+   }
+  },
+  {
+   "id": "m4-bruisers",
+   "section": "mods",
+   "name": "Bruiser's",
+   "tier": 4,
+   "material": "1 Bufftats",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Melee damage +5% per stack (up to +25% at full stack)",
+    "powerArmor": "Melee damage +5% per stack (up to +25% at full stack)"
+   }
+  },
+  {
+   "id": "m4-choochoos",
+   "section": "mods",
+   "name": "Choo-Choo's",
+   "tier": 4,
+   "material": "15 Cannonballs",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "10% chance of 500 damage on a sprinting impact (up to 50% stacked)"
+   }
+  },
+  {
+   "id": "m4-combobreakers",
+   "section": "mods",
+   "name": "Combo-Breaker's",
+   "tier": 4,
+   "material": "1 Day Tripper",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "50% chance to not consume Action Points (10% auto for melee) (melee only)"
+   }
+  },
+  {
+   "id": "m4-conductors",
+   "section": "mods",
+   "name": "Conductor's",
+   "tier": 4,
+   "material": "5 Pure Crimson Flux",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Critical hits restore team health and Action Points"
+   }
+  },
+  {
+   "id": "m4-electricians",
+   "section": "mods",
+   "name": "Electrician's",
+   "tier": 4,
+   "material": "Bobblehead: Energy Weapons",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Reloading emits a stunning shockwave for 3 seconds (ranged only)"
+   }
+  },
+  {
+   "id": "m4-encirclers",
+   "section": "mods",
+   "name": "Encircler's",
+   "tier": 4,
+   "material": "1 Overdrive",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+10% damage per nearby combat target (up to +50%)"
+   }
+  },
+  {
+   "id": "m4-fencers",
+   "section": "mods",
+   "name": "Fencer's",
+   "tier": 4,
+   "material": "Bobblehead: Melee",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+12.5% melee damage per nearby teammate (up to +50%) (melee only)"
+   }
+  },
+  {
+   "id": "m4-fracturers",
+   "section": "mods",
+   "name": "Fracturer's",
+   "tier": 4,
+   "material": "25 Gunpowder",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Crippled limbs explode for up to 50 damage"
+   }
+  },
+  {
+   "id": "m4-haulers",
+   "section": "mods",
+   "name": "Hauler's",
+   "tier": 4,
+   "material": "5 Cloth",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+30 carry capacity",
+    "powerArmor": "+30 carry capacity"
+   }
+  },
+  {
+   "id": "m4-icemens",
+   "section": "mods",
+   "name": "Icemen's",
+   "tier": 4,
+   "material": "5 Pure Fluorescent Flux",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Applies a cryo slow effect on V.A.T.S. hits (melee only)"
+   }
+  },
+  {
+   "id": "m4-limitbreaking",
+   "section": "mods",
+   "name": "Limit-Breaking",
+   "tier": 4,
+   "material": "5 Pure Violet Flux",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Each equipped piece reduces critical hit cost by 10% (up to -50%)",
+    "powerArmor": "Each equipped piece reduces critical hit cost by 10% (up to -50%)"
+   }
+  },
+  {
+   "id": "m4-miasmas",
+   "section": "mods",
+   "name": "Miasma's",
+   "tier": 4,
+   "material": "1 Plague Walker Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "When hit, releases a poison cloud that damages nearby enemies",
+    "powerArmor": "When hit, releases a poison cloud that damages nearby enemies"
+   }
+  },
+  {
+   "id": "m4-pinpointers",
+   "section": "mods",
+   "name": "Pin-Pointer's",
+   "tier": 4,
+   "material": "1 Formula P",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+20% damage to weak spots (ranged only)"
+   }
+  },
+  {
+   "id": "m4-polished",
+   "section": "mods",
+   "name": "Polished",
+   "tier": 4,
+   "material": "1 Improved Repair Kit",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Higher item condition grants up to +60% weapon damage"
+   }
+  },
+  {
+   "id": "m4-pounders",
+   "section": "mods",
+   "name": "Pounder's",
+   "tier": 4,
+   "material": "1 Fury",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+10% damage per Onslaught stack (up to 10 stacks) (melee only)"
+   }
+  },
+  {
+   "id": "m4-propelling",
+   "section": "mods",
+   "name": "Propelling",
+   "tier": 4,
+   "material": "15 Vault Steel Scrap",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "+5% movement/sprint speed per stack (up to +25%)"
+   }
+  },
+  {
+   "id": "m4-pyromaniacs",
+   "section": "mods",
+   "name": "Pyromaniac's",
+   "tier": 4,
+   "material": "15 Asbestos",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% bonus damage to burning targets"
+   }
+  },
+  {
+   "id": "m4-radioactivepowered",
+   "section": "mods",
+   "name": "Radioactive-Powered",
+   "tier": 4,
+   "material": "5 Pure Cobalt Flux",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "+2 Action Point regen at the cost of radiation (up to +10)"
+   }
+  },
+  {
+   "id": "m4-raging",
+   "section": "mods",
+   "name": "Raging",
+   "tier": 4,
+   "material": "1 Buffout",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+3% damage for 10 seconds after being hit",
+    "powerArmor": "+3% damage for 10 seconds after being hit"
+   }
+  },
+  {
+   "id": "m4-rangers",
+   "section": "mods",
+   "name": "Ranger's",
+   "tier": 4,
+   "material": "1 Psychobuff",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Ranged damage +5% per stack (up to +25% at full stack)",
+    "powerArmor": "Ranged damage +5% per stack (up to +25% at full stack)"
+   }
+  },
+  {
+   "id": "m4-reflective",
+   "section": "mods",
+   "name": "Reflective",
+   "tier": 4,
+   "material": "Bobblehead: Science",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "Returns 10% of incoming damage to the attacker (up to 50%)"
+   }
+  },
+  {
+   "id": "m4-rejuvenators",
+   "section": "mods",
+   "name": "Rejuvenator's",
+   "tier": 4,
+   "material": "5 Stimpak Diffuser",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "Gradually restores team health and Action Points within 50ft"
+   }
+  },
+  {
+   "id": "m4-runners",
+   "section": "mods",
+   "name": "Runner's",
+   "tier": 4,
+   "material": "10 Purified Water",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "Sprint Action Point cost reduced by 20% per stack (up to -100%)",
+    "powerArmor": "Sprint Action Point cost reduced by 20% per stack (up to -100%)"
+   }
+  },
+  {
+   "id": "m4-satiated",
+   "section": "mods",
+   "name": "Satiated",
+   "tier": 4,
+   "material": "5 Salt",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Kills restore hunger and thirst (Ghoul: restores feral meter)"
+   }
+  },
+  {
+   "id": "m4-sawboness",
+   "section": "mods",
+   "name": "Sawbones's",
+   "tier": 4,
+   "material": "1 Healing Factor Serum",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+1 health regen per second (up to +5)",
+    "powerArmor": "+1 health regen per second (up to +5)"
+   }
+  },
+  {
+   "id": "m4-scanners",
+   "section": "mods",
+   "name": "Scanner's",
+   "tier": 4,
+   "material": "1 X-Cell",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "V.A.T.S. Action Point cost reduced by 5% (up to -25%)"
+   }
+  },
+  {
+   "id": "m4-stabilizers",
+   "section": "mods",
+   "name": "Stabilizer's",
+   "tier": 4,
+   "material": "25 Rubber",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% recoil control and weapon stability (ranged only)"
+   }
+  },
+  {
+   "id": "m4-stalwarts",
+   "section": "mods",
+   "name": "Stalwart's",
+   "tier": 4,
+   "material": "Bobblehead: Leader",
+   "appliesTo": [
+    "powerArmor"
+   ],
+   "effects": {
+    "powerArmor": "Team power armor breaks 5% slower (up to 25% stacked)"
+   }
+  },
+  {
+   "id": "m4-tankys",
+   "section": "mods",
+   "name": "Tanky's",
+   "tier": 4,
+   "material": "5 Ballistic Fiber",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+200 Damage/Energy Resistance while standing still (up to +1000)",
+    "powerArmor": "+200 Damage/Energy Resistance while standing still (up to +1000)"
+   }
+  },
+  {
+   "id": "m4-tarnished",
+   "section": "mods",
+   "name": "Tarnished",
+   "tier": 4,
+   "material": "5 Fiberglass",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Up to +120% damage as durability decreases"
+   }
+  },
+  {
+   "id": "m4-thrillseekers",
+   "section": "mods",
+   "name": "Thrill-Seeker's",
+   "tier": 4,
+   "material": "1 Adrenal Reaction Serum",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "Reload/melee speed scales with kill streak"
+   }
+  },
+  {
+   "id": "m4-vector",
+   "section": "mods",
+   "name": "Vector",
+   "tier": 4,
+   "material": "1 Magnifying Glass",
+   "appliesTo": [
+    "armor",
+    "powerArmor"
+   ],
+   "effects": {
+    "armor": "+10% V.A.T.S. accuracy vs distant targets",
+    "powerArmor": "+10% V.A.T.S. accuracy vs distant targets"
+   }
+  },
+  {
+   "id": "m4-vipers",
+   "section": "mods",
+   "name": "Viper's",
+   "tier": 4,
+   "material": "15 Acid",
+   "appliesTo": [
+    "weapon"
+   ],
+   "effects": {
+    "weapon": "+50% bonus damage to poisoned targets"
+   }
+  },
+  {
+   "id": "wp-50-cal-machine-gun",
+   "section": "weapons",
+   "name": ".50 Cal Machine Gun",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-10mm-pistol",
+   "section": "weapons",
+   "name": "10mm Pistol",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-alien-blaster",
+   "section": "weapons",
+   "name": "Alien Blaster",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-alien-disintegrator",
+   "section": "weapons",
+   "name": "Alien Disintegrator",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-assaultron-blade",
+   "section": "weapons",
+   "name": "Assaultron Blade",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-auto-grenade-launcher",
+   "section": "weapons",
+   "name": "Auto Grenade Launcher",
+   "categories": [
+    "launchers"
+   ]
+  },
+  {
+   "id": "wp-baseball-bat",
+   "section": "weapons",
+   "name": "Baseball Bat",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-bear-arm",
+   "section": "weapons",
+   "name": "Bear Arm",
+   "categories": [
+    "fist"
+   ]
+  },
+  {
+   "id": "wp-black-powder-pistol",
+   "section": "weapons",
+   "name": "Black Powder Pistol",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-black-powder-rifle",
+   "section": "weapons",
+   "name": "Black Powder Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-board",
+   "section": "weapons",
+   "name": "Board",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-bow",
+   "section": "weapons",
+   "name": "Bow",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-bowie-knife",
+   "section": "weapons",
+   "name": "Bowie Knife",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-boxing-glove",
+   "section": "weapons",
+   "name": "Boxing Glove",
+   "categories": [
+    "blunt",
+    "fist"
+   ]
+  },
+  {
+   "id": "wp-broadsider",
+   "section": "weapons",
+   "name": "Broadsider",
+   "categories": [
+    "launchers"
+   ]
+  },
+  {
+   "id": "wp-chinese-officer-sword",
+   "section": "weapons",
+   "name": "Chinese Officer Sword",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-combat-knife",
+   "section": "weapons",
+   "name": "Combat Knife",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-combat-shotgun",
+   "section": "weapons",
+   "name": "Combat Shotgun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-compound-bow",
+   "section": "weapons",
+   "name": "Compound Bow",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-crossbow",
+   "section": "weapons",
+   "name": "Crossbow",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-cryolator",
+   "section": "weapons",
+   "name": "Cryolator",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-cultist-blade",
+   "section": "weapons",
+   "name": "Cultist Blade",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-cultist-dagger",
+   "section": "weapons",
+   "name": "Cultist Dagger",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-death-tambo",
+   "section": "weapons",
+   "name": "Death Tambo",
+   "categories": [
+    "fist",
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-fat-man",
+   "section": "weapons",
+   "name": "Fat Man",
+   "categories": [
+    "launchers"
+   ]
+  },
+  {
+   "id": "wp-fire-axe",
+   "section": "weapons",
+   "name": "Fire Axe",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-flare-gun",
+   "section": "weapons",
+   "name": "Flare Gun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-gatling-laser",
+   "section": "weapons",
+   "name": "Gatling Laser",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-gatling-plasma",
+   "section": "weapons",
+   "name": "Gatling Plasma",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-gauss-rifle",
+   "section": "weapons",
+   "name": "Gauss Rifle",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-golf-club",
+   "section": "weapons",
+   "name": "Golf Club",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-grognaks-axe",
+   "section": "weapons",
+   "name": "Grognak's Axe",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-guitar-sword",
+   "section": "weapons",
+   "name": "Guitar Sword",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-gulper-smacker",
+   "section": "weapons",
+   "name": "Gulper Smacker",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-harpoon-gun",
+   "section": "weapons",
+   "name": "Harpoon Gun",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-hatchet",
+   "section": "weapons",
+   "name": "Hatchet",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-hog-splitter",
+   "section": "weapons",
+   "name": "Hog Splitter",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-knuckles",
+   "section": "weapons",
+   "name": "Knuckles",
+   "categories": [
+    "blunt",
+    "fist"
+   ]
+  },
+  {
+   "id": "wp-lead-pipe",
+   "section": "weapons",
+   "name": "Lead Pipe",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-light-machine-gun",
+   "section": "weapons",
+   "name": "Light Machine Gun",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-m79-grenade-launcher",
+   "section": "weapons",
+   "name": "M79 Grenade Launcher",
+   "categories": [
+    "launchers"
+   ]
+  },
+  {
+   "id": "wp-machete",
+   "section": "weapons",
+   "name": "Machete",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-meat-cleaver",
+   "section": "weapons",
+   "name": "Meat Cleaver",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-meat-hook",
+   "section": "weapons",
+   "name": "Meat Hook",
+   "categories": [
+    "fist",
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-minigun",
+   "section": "weapons",
+   "name": "Minigun",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-missile-launcher",
+   "section": "weapons",
+   "name": "Missile Launcher",
+   "categories": [
+    "launchers"
+   ]
+  },
+  {
+   "id": "wp-mole-miner-gauntlet",
+   "section": "weapons",
+   "name": "Mole Miner Gauntlet",
+   "categories": [
+    "fist"
+   ]
+  },
+  {
+   "id": "wp-mr-handy-buzz-blade",
+   "section": "weapons",
+   "name": "Mr. Handy Buzz Blade",
+   "categories": [
+    "power-tools"
+   ]
+  },
+  {
+   "id": "wp-multipurpose-axe",
+   "section": "weapons",
+   "name": "Multi-Purpose Axe",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-pepper-shaker",
+   "section": "weapons",
+   "name": "Pepper Shaker",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-pickaxe",
+   "section": "weapons",
+   "name": "Pickaxe",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-pipe-boltaction-pistol",
+   "section": "weapons",
+   "name": "Pipe Bolt-Action Pistol",
+   "categories": [
+    "pipe"
+   ]
+  },
+  {
+   "id": "wp-pipe-pistol",
+   "section": "weapons",
+   "name": "Pipe Pistol",
+   "categories": [
+    "pipe"
+   ]
+  },
+  {
+   "id": "wp-pipe-revolver",
+   "section": "weapons",
+   "name": "Pipe Revolver",
+   "categories": [
+    "pipe"
+   ]
+  },
+  {
+   "id": "wp-pipe-wrench",
+   "section": "weapons",
+   "name": "Pipe Wrench",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-pitchfork",
+   "section": "weapons",
+   "name": "Pitchfork",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-pool-cue",
+   "section": "weapons",
+   "name": "Pool Cue",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-power-fist",
+   "section": "weapons",
+   "name": "Power Fist",
+   "categories": [
+    "blunt",
+    "fist"
+   ]
+  },
+  {
+   "id": "wp-railway-rifle",
+   "section": "weapons",
+   "name": "Railway Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-revolutionary-sword",
+   "section": "weapons",
+   "name": "Revolutionary Sword",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-ripper",
+   "section": "weapons",
+   "name": "Ripper",
+   "categories": [
+    "power-tools"
+   ]
+  },
+  {
+   "id": "wp-rolling-pin",
+   "section": "weapons",
+   "name": "Rolling Pin",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-salvaged-assaultron-head",
+   "section": "weapons",
+   "name": "Salvaged Assaultron Head",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-security-baton",
+   "section": "weapons",
+   "name": "Security Baton",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-sheepsquatch-club",
+   "section": "weapons",
+   "name": "Sheepsquatch Club",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-sheepsquatch-shard",
+   "section": "weapons",
+   "name": "Sheepsquatch Shard",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-sheepsquatch-staff",
+   "section": "weapons",
+   "name": "Sheepsquatch Staff",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-shepherds-crook",
+   "section": "weapons",
+   "name": "Shepherd's Crook",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-shishkebab",
+   "section": "weapons",
+   "name": "Shishkebab",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-short-10mm-submachine-gun",
+   "section": "weapons",
+   "name": "Short 10mm Submachine Gun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-assault-rifle",
+   "section": "weapons",
+   "name": "Short Assault Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-combat-rifle",
+   "section": "weapons",
+   "name": "Short Combat Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-doublebarrel-shotgun",
+   "section": "weapons",
+   "name": "Short Double-Barrel Shotgun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-flamer",
+   "section": "weapons",
+   "name": "Short Flamer",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-short-gamma-gun",
+   "section": "weapons",
+   "name": "Short Gamma Gun",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-short-gatling-gun",
+   "section": "weapons",
+   "name": "Short Gatling Gun",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-short-handmade",
+   "section": "weapons",
+   "name": "Short Handmade",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-hunting-rifle",
+   "section": "weapons",
+   "name": "Short Hunting Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-laser-pistol",
+   "section": "weapons",
+   "name": "Short Laser Pistol",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-short-lever-action-rifle",
+   "section": "weapons",
+   "name": "Short Lever Action Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-plasma-pistol",
+   "section": "weapons",
+   "name": "Short Plasma Pistol",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-short-pump-action-shotgun",
+   "section": "weapons",
+   "name": "Short Pump Action Shotgun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-radium-rifle",
+   "section": "weapons",
+   "name": "Short Radium Rifle",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-short-ultracite-laser-pistol",
+   "section": "weapons",
+   "name": "Short Ultracite Laser Pistol",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-short-western-revolver",
+   "section": "weapons",
+   "name": "Short Western Revolver",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-sickle",
+   "section": "weapons",
+   "name": "Sickle",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-single-action-revolver",
+   "section": "weapons",
+   "name": "Single Action Revolver",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-ski-sword",
+   "section": "weapons",
+   "name": "Ski Sword",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-sledgehammer",
+   "section": "weapons",
+   "name": "Sledgehammer",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-snubnosed-44-pistol",
+   "section": "weapons",
+   "name": "Snubnosed .44 Pistol",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-spear",
+   "section": "weapons",
+   "name": "Spear",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-submachine-gun",
+   "section": "weapons",
+   "name": "Submachine Gun",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-super-sledge",
+   "section": "weapons",
+   "name": "Super Sledge",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-switchblade",
+   "section": "weapons",
+   "name": "Switchblade",
+   "categories": [
+    "sharp"
+   ]
+  },
+  {
+   "id": "wp-syringer",
+   "section": "weapons",
+   "name": "Syringer",
+   "categories": [
+    "pipe"
+   ]
+  },
+  {
+   "id": "wp-tesla-rifle",
+   "section": "weapons",
+   "name": "Tesla Rifle",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-the-fixer",
+   "section": "weapons",
+   "name": "The Fixer",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-the-tenderizer",
+   "section": "weapons",
+   "name": "The Tenderizer",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-thirst-zapper",
+   "section": "weapons",
+   "name": "Thirst Zapper",
+   "categories": [
+    "energy"
+   ]
+  },
+  {
+   "id": "wp-throwing-knife",
+   "section": "weapons",
+   "name": "Throwing Knife",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-tire-iron",
+   "section": "weapons",
+   "name": "Tire Iron",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-tomahawk",
+   "section": "weapons",
+   "name": "Tomahawk",
+   "categories": [
+    "survival"
+   ]
+  },
+  {
+   "id": "wp-ultracite-gatling-laser",
+   "section": "weapons",
+   "name": "Ultracite Gatling Laser",
+   "categories": [
+    "heavy"
+   ]
+  },
+  {
+   "id": "wp-voice-of-set",
+   "section": "weapons",
+   "name": "Voice of Set",
+   "categories": [
+    "machine-guns"
+   ]
+  },
+  {
+   "id": "wp-walking-cane",
+   "section": "weapons",
+   "name": "Walking Cane",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "wp-war-drum",
+   "section": "weapons",
+   "name": "War Drum",
+   "categories": [
+    "blunt"
+   ]
+  },
+  {
+   "id": "ar-combat",
+   "section": "armor",
+   "name": "Combat Armor (full set)"
+  },
+  {
+   "id": "ar-pa-excavator",
+   "section": "armor",
+   "name": "Excavator Power Armor (full set)"
+  },
+  {
+   "id": "ar-forest-scout",
+   "section": "armor",
+   "name": "Forest Scout Armor (full set)"
+  },
+  {
+   "id": "ar-leather",
+   "section": "armor",
+   "name": "Leather Armor (full set)"
+  },
+  {
+   "id": "ar-marine",
+   "section": "armor",
+   "name": "Marine Armor (full set)"
+  },
+  {
+   "id": "ar-metal",
+   "section": "armor",
+   "name": "Metal Armor (full set)"
+  },
+  {
+   "id": "ar-raider",
+   "section": "armor",
+   "name": "Raider Armor (full set)"
+  },
+  {
+   "id": "ar-pa-raider",
+   "section": "armor",
+   "name": "Raider Power Armor (full set)"
+  },
+  {
+   "id": "ar-robot",
+   "section": "armor",
+   "name": "Robot Armor (full set)"
+  },
+  {
+   "id": "ar-pa-t45",
+   "section": "armor",
+   "name": "T-45 Power Armor (full set)"
+  },
+  {
+   "id": "ar-pa-t51b",
+   "section": "armor",
+   "name": "T-51b Power Armor (full set)"
+  },
+  {
+   "id": "ar-pa-t60",
+   "section": "armor",
+   "name": "T-60 Power Armor (full set)"
+  },
+  {
+   "id": "ar-trapper",
+   "section": "armor",
+   "name": "Trapper Armor (full set)"
+  },
+  {
+   "id": "ar-pa-ultracite",
+   "section": "armor",
+   "name": "Ultracite Power Armor (full set)"
+  },
+  {
+   "id": "ar-urban-scout",
+   "section": "armor",
+   "name": "Urban Scout Armor (full set)"
+  },
+  {
+   "id": "ar-wood",
+   "section": "armor",
+   "name": "Wood Armor (full set)"
+  },
+  {
+   "id": "ar-pa-x01",
+   "section": "armor",
+   "name": "X-01 Power Armor (full set)"
+  },
+  {
+   "id": "ap-assaultron-helmet",
+   "section": "apparel",
+   "name": "Assaultron Helmet"
+  },
+  {
+   "id": "ap-blue-devil-outfit",
+   "section": "apparel",
+   "name": "Blue Devil Outfit"
+  },
+  {
+   "id": "ap-blue-devil-pelt-hood",
+   "section": "apparel",
+   "name": "Blue Devil Pelt Hood"
+  },
+  {
+   "id": "ap-blue-ridge-scout-helmet",
+   "section": "apparel",
+   "name": "Blue Ridge Scout Helmet"
+  },
+  {
+   "id": "ap-blue-ridge-scout-outfit",
+   "section": "apparel",
+   "name": "Blue Ridge Scout Outfit"
+  },
+  {
+   "id": "ap-bone-chill-skull-mask",
+   "section": "apparel",
+   "name": "Bone Chill Skull Mask"
+  },
+  {
+   "id": "ap-vault-63-recon-outfit-helmet-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Recon Helmet"
+  },
+  {
+   "id": "ap-v63-recon-outfit-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Recon Outfit"
+  },
+  {
+   "id": "ap-vault-63-riot-control-outfit-helmet-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Riot Control Helmet"
+  },
+  {
+   "id": "ap-v63-riot-control-outfit-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Riot Control Outfit"
+  },
+  {
+   "id": "ap-vault-63-security-outfit-helmet-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Security Helmet"
+  },
+  {
+   "id": "ap-v63-security-outfit-burnt",
+   "section": "apparel",
+   "name": "Burnt Vault 63 Security Outfit"
+  },
+  {
+   "id": "ap-burnt-vault-chemist-coat",
+   "section": "apparel",
+   "name": "Burnt Vault Chemist Coat"
+  },
+  {
+   "id": "ap-burnt-vault-lab-coat",
+   "section": "apparel",
+   "name": "Burnt Vault Lab Coat"
+  },
+  {
+   "id": "ap-civil-war-era-dress",
+   "section": "apparel",
+   "name": "Civil War Era Dress"
+  },
+  {
+   "id": "ap-civil-war-era-suit",
+   "section": "apparel",
+   "name": "Civil War Era Suit"
+  },
+  {
+   "id": "ap-civil-war-era-top-hat",
+   "section": "apparel",
+   "name": "Civil War Era Top Hat"
+  },
+  {
+   "id": "ap-confederate-hat",
+   "section": "apparel",
+   "name": "Confederate Hat"
+  },
+  {
+   "id": "ap-confederate-uniform",
+   "section": "apparel",
+   "name": "Confederate Uniform"
+  },
+  {
+   "id": "ap-halloween-costume-witch-hat",
+   "section": "apparel",
+   "name": "Costume Witch Hat"
+  },
+  {
+   "id": "ap-cowboy-chaps",
+   "section": "apparel",
+   "name": "Cowboy Chaps"
+  },
+  {
+   "id": "ap-cowboy-duster",
+   "section": "apparel",
+   "name": "Cowboy Duster"
+  },
+  {
+   "id": "ap-cowboy-hat",
+   "section": "apparel",
+   "name": "Cowboy Hat"
+  },
+  {
+   "id": "ap-crude-skull-mask",
+   "section": "apparel",
+   "name": "Crude Skull Mask"
+  },
+  {
+   "id": "ap-cryptid-hunter-boonie-hat",
+   "section": "apparel",
+   "name": "Cryptid Hunter Boonie Hat"
+  },
+  {
+   "id": "ap-cultist-adept-hood",
+   "section": "apparel",
+   "name": "Cultist Adept Hood"
+  },
+  {
+   "id": "ap-cultist-adept-robes",
+   "section": "apparel",
+   "name": "Cultist Adept Robes"
+  },
+  {
+   "id": "ap-cultist-enlightened-hood",
+   "section": "apparel",
+   "name": "Cultist Enlightened Hood"
+  },
+  {
+   "id": "ap-cultist-enlightened-robes",
+   "section": "apparel",
+   "name": "Cultist Enlightened Robes"
+  },
+  {
+   "id": "ap-cultist-eventide-hood",
+   "section": "apparel",
+   "name": "Cultist Eventide Hood"
+  },
+  {
+   "id": "ap-cultist-eventide-robes",
+   "section": "apparel",
+   "name": "Cultist Eventide Robes"
+  },
+  {
+   "id": "ap-cultist-incarnate-helmet",
+   "section": "apparel",
+   "name": "Cultist Incarnate Helmet"
+  },
+  {
+   "id": "ap-cultist-monarch-mask",
+   "section": "apparel",
+   "name": "Cultist Monarch Mask"
+  },
+  {
+   "id": "ap-cultist-monarch-outfit",
+   "section": "apparel",
+   "name": "Cultist Monarch Outfit"
+  },
+  {
+   "id": "ap-cultist-neophyte-hood",
+   "section": "apparel",
+   "name": "Cultist Neophyte Hood"
+  },
+  {
+   "id": "ap-cultist-neophyte-robes",
+   "section": "apparel",
+   "name": "Cultist Neophyte Robes"
+  },
+  {
+   "id": "ap-deathclaw-skin-outfit",
+   "section": "apparel",
+   "name": "Deathclaw Skin Outfit"
+  },
+  {
+   "id": "ap-deathclaw-tamer-hat",
+   "section": "apparel",
+   "name": "Deathclaw Tamer Hat"
+  },
+  {
+   "id": "ap-deathclaw-tamer-outfit",
+   "section": "apparel",
+   "name": "Deathclaw Tamer Outfit"
+  },
+  {
+   "id": "ap-executioners-mask",
+   "section": "apparel",
+   "name": "Executioner's Mask"
+  },
+  {
+   "id": "ap-eyebot-helmet",
+   "section": "apparel",
+   "name": "Eyebot Helmet"
+  },
+  {
+   "id": "ap-flower-crown-candykill",
+   "section": "apparel",
+   "name": "Flower Crown - Candykill"
+  },
+  {
+   "id": "ap-flower-crown-carnal-weeper",
+   "section": "apparel",
+   "name": "Flower Crown - Carnal Weeper"
+  },
+  {
+   "id": "ap-flower-crown-crystalcup",
+   "section": "apparel",
+   "name": "Flower Crown - Crystalcup"
+  },
+  {
+   "id": "ap-flower-crown-embergold",
+   "section": "apparel",
+   "name": "Flower Crown - Embergold"
+  },
+  {
+   "id": "ap-flower-crown-gigablossom",
+   "section": "apparel",
+   "name": "Flower Crown - Gigablossom"
+  },
+  {
+   "id": "ap-flower-crown-glorybell",
+   "section": "apparel",
+   "name": "Flower Crown - Glorybell"
+  },
+  {
+   "id": "ap-flower-crown-green-invader",
+   "section": "apparel",
+   "name": "Flower Crown - Green Invader"
+  },
+  {
+   "id": "ap-flower-crown-radlily",
+   "section": "apparel",
+   "name": "Flower Crown - Radlily"
+  },
+  {
+   "id": "ap-flower-crown-seesprout",
+   "section": "apparel",
+   "name": "Flower Crown - Seesprout"
+  },
+  {
+   "id": "ap-flower-crown-starlace",
+   "section": "apparel",
+   "name": "Flower Crown - Starlace"
+  },
+  {
+   "id": "ap-flower-suit",
+   "section": "apparel",
+   "name": "Flower Suit"
+  },
+  {
+   "id": "ap-flower-printed-sundress",
+   "section": "apparel",
+   "name": "Flower-Printed Sundress"
+  },
+  {
+   "id": "ap-garb-of-mysteries",
+   "section": "apparel",
+   "name": "Garb of Mysteries"
+  },
+  {
+   "id": "ap-glowing-skeleton-costume",
+   "section": "apparel",
+   "name": "Glowing Skeleton Costume"
+  },
+  {
+   "id": "ap-glowing-skeleton-hood",
+   "section": "apparel",
+   "name": "Glowing Skeleton Hood"
+  },
+  {
+   "id": "ap-gulper-skin-hood",
+   "section": "apparel",
+   "name": "Gulper Skin Hood"
+  },
+  {
+   "id": "ap-gulper-skin-outfit",
+   "section": "apparel",
+   "name": "Gulper Skin Outfit"
+  },
+  {
+   "id": "ap-halloween-costume-skeleton",
+   "section": "apparel",
+   "name": "Halloween Costume Skeleton"
+  },
+  {
+   "id": "ap-halloween-costume-witch",
+   "section": "apparel",
+   "name": "Halloween Costume Witch"
+  },
+  {
+   "id": "ap-halloween-costume-skull",
+   "section": "apparel",
+   "name": "Halloween Skull Mask"
+  },
+  {
+   "id": "ap-hammered-skull-mask",
+   "section": "apparel",
+   "name": "Hammered Skull Mask"
+  },
+  {
+   "id": "ap-hazmat-suit",
+   "section": "apparel",
+   "name": "Hazmat Suit"
+  },
+  {
+   "id": "ap-hazmat-suit-pink",
+   "section": "apparel",
+   "name": "Hazmat Suit - Pink"
+  },
+  {
+   "id": "ap-hazmat-suit-teal",
+   "section": "apparel",
+   "name": "Hazmat Suit - Teal"
+  },
+  {
+   "id": "ap-hunters-hanbok-outfit",
+   "section": "apparel",
+   "name": "Hunter's Hanbok Outfit"
+  },
+  {
+   "id": "ap-insurgent-hat",
+   "section": "apparel",
+   "name": "Insurgent Hat"
+  },
+  {
+   "id": "ap-insurgent-outfit",
+   "section": "apparel",
+   "name": "Insurgent Outfit"
+  },
+  {
+   "id": "ap-jitterbug-judy-outfit",
+   "section": "apparel",
+   "name": "Jitterbug Judy Outfit"
+  },
+  {
+   "id": "ap-lederhosen-outfit",
+   "section": "apparel",
+   "name": "Lederhosen Outfit"
+  },
+  {
+   "id": "ap-lederhosen-hat",
+   "section": "apparel",
+   "name": "Lederhosen Outfit Hat"
+  },
+  {
+   "id": "ap-marine-armor-helmet",
+   "section": "apparel",
+   "name": "Marine Armor Helmet"
+  },
+  {
+   "id": "ap-marine-tactical-helmet",
+   "section": "apparel",
+   "name": "Marine Tactical Helmet"
+  },
+  {
+   "id": "ap-milkman-hat",
+   "section": "apparel",
+   "name": "Milkman Hat"
+  },
+  {
+   "id": "ap-milkman-outfit",
+   "section": "apparel",
+   "name": "Milkman Outfit"
+  },
+  {
+   "id": "ap-ogua-hunter-hood",
+   "section": "apparel",
+   "name": "Ogua Hunter Hood"
+  },
+  {
+   "id": "ap-ogua-hunter-outfit",
+   "section": "apparel",
+   "name": "Ogua Hunter Outfit"
+  },
+  {
+   "id": "ap-skiing-purple-and-white-outfit",
+   "section": "apparel",
+   "name": "Purple and White Skiing Outfit"
+  },
+  {
+   "id": "ap-rad-skull-rider-helmet",
+   "section": "apparel",
+   "name": "Rad Skull Rider Helmet"
+  },
+  {
+   "id": "ap-redcoat-hat",
+   "section": "apparel",
+   "name": "Redcoat Hat"
+  },
+  {
+   "id": "ap-redcoat-outfit",
+   "section": "apparel",
+   "name": "Redcoat Outfit"
+  },
+  {
+   "id": "ap-sentrybot-helmet",
+   "section": "apparel",
+   "name": "Sentry Bot Helmet"
+  },
+  {
+   "id": "ap-spectacular-performers-headwear",
+   "section": "apparel",
+   "name": "Spectacular Performer's Headwear"
+  },
+  {
+   "id": "ap-spectacular-performers-outfit",
+   "section": "apparel",
+   "name": "Spectacular Performer's Outfit"
+  },
+  {
+   "id": "ap-spooky-scarecrow-headpiece",
+   "section": "apparel",
+   "name": "Spooky Scarecrow Headpiece"
+  },
+  {
+   "id": "ap-spooky-scarecrow-outfit",
+   "section": "apparel",
+   "name": "Spooky Scarecrow Outfit"
+  },
+  {
+   "id": "ap-treasure-hunter-hat",
+   "section": "apparel",
+   "name": "Treasure Hunter Hat"
+  },
+  {
+   "id": "ap-treasure-hunter-outfit",
+   "section": "apparel",
+   "name": "Treasure Hunter Outfit"
+  },
+  {
+   "id": "ap-umbrella-hat",
+   "section": "apparel",
+   "name": "Umbrella Hat"
+  },
+  {
+   "id": "ap-union-hat",
+   "section": "apparel",
+   "name": "Union Hat"
+  },
+  {
+   "id": "ap-union-uniform",
+   "section": "apparel",
+   "name": "Union Uniform"
+  },
+  {
+   "id": "ap-vault-63-recon-outfit-helmet",
+   "section": "apparel",
+   "name": "V63 Recon Helmet"
+  },
+  {
+   "id": "ap-vault-63-recon-outfit",
+   "section": "apparel",
+   "name": "V63 Recon Outfit"
+  },
+  {
+   "id": "ap-vault-63-riot-control-outfit-helmet",
+   "section": "apparel",
+   "name": "V63 Riot Control Helmet"
+  },
+  {
+   "id": "ap-vault-63-riot-control-outfit",
+   "section": "apparel",
+   "name": "V63 Riot Control Outfit"
+  },
+  {
+   "id": "ap-vault-63-security-outfit-helmet",
+   "section": "apparel",
+   "name": "V63 Security Helmet"
+  },
+  {
+   "id": "ap-vault-63-security-outfit",
+   "section": "apparel",
+   "name": "V63 Security Outfit"
+  },
+  {
+   "id": "ap-vault-63-burnt-jumpsuit",
+   "section": "apparel",
+   "name": "Vault 63 Burnt Jumpsuit"
+  },
+  {
+   "id": "ap-vault-63-hazmat-suit",
+   "section": "apparel",
+   "name": "Vault 63 Hazmat Suit"
+  },
+  {
+   "id": "ap-vault-tec-jumpsuit",
+   "section": "apparel",
+   "name": "Vault-Tec Jumpsuit"
+  },
+  {
+   "id": "ap-wasteland-florist-apron",
+   "section": "apparel",
+   "name": "Wasteland Florist Apron"
+  },
+  {
+   "id": "ap-wasteland-florist-sunhat",
+   "section": "apparel",
+   "name": "Wasteland Florist Sunhat"
+  },
+  {
+   "id": "se-adrenal-reaction",
+   "section": "serums",
+   "name": "Adrenal Reaction Serum",
+   "materials": []
+  },
+  {
+   "id": "se-bird-bones",
+   "section": "serums",
+   "name": "Bird Bones Serum",
+   "materials": []
+  },
+  {
+   "id": "se-carnivore",
+   "section": "serums",
+   "name": "Carnivore Serum",
+   "materials": []
+  },
+  {
+   "id": "se-chameleon",
+   "section": "serums",
+   "name": "Chameleon Serum",
+   "materials": []
+  },
+  {
+   "id": "se-eagle-eyes",
+   "section": "serums",
+   "name": "Eagle Eyes Serum",
+   "materials": []
+  },
+  {
+   "id": "se-egg-head",
+   "section": "serums",
+   "name": "Egg Head Serum",
+   "materials": []
+  },
+  {
+   "id": "se-electrically-charged",
+   "section": "serums",
+   "name": "Electrically Charged Serum",
+   "materials": []
+  },
+  {
+   "id": "se-empath",
+   "section": "serums",
+   "name": "Empath Serum",
+   "materials": []
+  },
+  {
+   "id": "se-grounded",
+   "section": "serums",
+   "name": "Grounded Serum",
+   "materials": []
+  },
+  {
+   "id": "se-healing-factor",
+   "section": "serums",
+   "name": "Healing Factor Serum",
+   "materials": []
+  },
+  {
+   "id": "se-herbivore",
+   "section": "serums",
+   "name": "Herbivore Serum",
+   "materials": []
+  },
+  {
+   "id": "se-herd-mentality",
+   "section": "serums",
+   "name": "Herd Mentality Serum",
+   "materials": []
+  },
+  {
+   "id": "se-marsupial",
+   "section": "serums",
+   "name": "Marsupial Serum",
+   "materials": []
+  },
+  {
+   "id": "se-plague-walker",
+   "section": "serums",
+   "name": "Plague Walker Serum",
+   "materials": []
+  },
+  {
+   "id": "se-scaly-skin",
+   "section": "serums",
+   "name": "Scaly Skin Serum",
+   "materials": []
+  },
+  {
+   "id": "se-speed-demon",
+   "section": "serums",
+   "name": "Speed Demon Serum",
+   "materials": []
+  },
+  {
+   "id": "se-talons",
+   "section": "serums",
+   "name": "Talons Serum",
+   "materials": []
+  },
+  {
+   "id": "se-twisted-muscles",
+   "section": "serums",
+   "name": "Twisted Muscles Serum",
+   "materials": []
+  },
+  {
+   "id": "se-unstable-isotope",
+   "section": "serums",
+   "name": "Unstable Isotope Serum",
+   "materials": []
+  },
+  {
+   "id": "ua-bos-camouflage-infantry-uniform",
+   "section": "underarmor",
+   "name": "BOS Camouflage Infantry Uniform"
+  },
+  {
+   "id": "ua-brotherhood-knight-suit",
+   "section": "underarmor",
+   "name": "Brotherhood Knight Suit"
+  },
+  {
+   "id": "ua-brotherhood-officer-suit",
+   "section": "underarmor",
+   "name": "Brotherhood Officer Suit"
+  },
+  {
+   "id": "ua-brotherhood-soldier-suit",
+   "section": "underarmor",
+   "name": "Brotherhood Soldier Suit"
+  },
+  {
+   "id": "ua-civil-engineer-underarmor",
+   "section": "underarmor",
+   "name": "Civil Engineer Underarmor"
+  },
+  {
+   "id": "ua-flannel-shirt-and-jeans",
+   "section": "underarmor",
+   "name": "Flannel Shirt and Jeans"
+  },
+  {
+   "id": "ua-harness",
+   "section": "underarmor",
+   "name": "Harness"
+  },
+  {
+   "id": "ua-long-johns",
+   "section": "underarmor",
+   "name": "Long Johns"
+  },
+  {
+   "id": "ua-marine-wetsuit",
+   "section": "underarmor",
+   "name": "Marine Wetsuit"
+  },
+  {
+   "id": "ua-raider-leathers",
+   "section": "underarmor",
+   "name": "Raider Leathers"
+  },
+  {
+   "id": "ua-road-leathers",
+   "section": "underarmor",
+   "name": "Road Leathers"
+  },
+  {
+   "id": "ua-undershirt-jeans",
+   "section": "underarmor",
+   "name": "Undershirt & Jeans"
+  },
+  {
+   "id": "ua-vault-51-jumpsuit",
+   "section": "underarmor",
+   "name": "Vault 51 Jumpsuit"
+  },
+  {
+   "id": "ua-vault-76-jumpsuit",
+   "section": "underarmor",
+   "name": "Vault 76 Jumpsuit"
+  },
+  {
+   "id": "ua-vault-94-jumpsuit",
+   "section": "underarmor",
+   "name": "Vault 94 Jumpsuit"
+  },
+  {
+   "id": "ua-vaulttec-university-jumpsuit",
+   "section": "underarmor",
+   "name": "Vault-Tec University Jumpsuit"
+  }
+ ]
+}

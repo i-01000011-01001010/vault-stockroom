@@ -3,45 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vendor Terminal :: Admin Editor</title>
+<title>Admin :: Vault Stockroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
 <div class="wrap">
-  <div class="boot">ROBCO INDUSTRIES (TM) TERMLINK<br>ADMIN / STOCK EDITOR (LOCAL ONLY, NOT PUBLISHED)</div>
 
-  <div class="admin-panel">
-    <p class="tagline">
-      This page runs entirely in your browser, nothing here gets uploaded anywhere.
-      Load your <code>data/items.json</code> and <code>data/config.json</code>, check off what
-      you currently have available, then download the updated files and commit/push them to
-      your GitHub repo.
-    </p>
-    <div class="admin-row">
-      <label class="file-input">ITEMS.JSON &nbsp;<input type="file" id="itemsFile" accept="application/json"></label>
-      <label class="file-input">CONFIG.JSON &nbsp;<input type="file" id="configFile" accept="application/json"></label>
-      <button class="btn" id="loadSampleBtn" type="button">USE BUNDLED SAMPLE DATA INSTEAD</button>
-    </div>
-    <div class="admin-row">
-      <button class="btn" id="downloadItemsBtn" disabled type="button">DOWNLOAD UPDATED items.json</button>
-      <button class="btn" id="downloadConfigBtn" disabled type="button">DOWNLOAD UPDATED config.json</button>
-      <span class="status-msg" id="statusMsg"></span>
-    </div>
+  <header class="masthead">
+    <div class="camp-name">ADMIN</div>
+    <p class="tagline" id="who">Checking sign-in...</p>
+  </header>
+
+  <nav class="nav-row">
+    <a href="index.html">VIEW SITE</a>
+    <a href="admin.html" class="active">ADMIN</a>
+    <span class="theme-slot" id="themeSlot"></span>
+  </nav>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button type="button" class="tab active" data-tab="stock">STOCK</button>
+    <button type="button" class="tab" data-tab="sections">SECTIONS</button>
+    <button type="button" class="tab" data-tab="site">SITE</button>
+    <button type="button" class="tab" data-tab="backup">BACKUP</button>
+    <button type="button" class="tab" data-tab="activity">ACTIVITY</button>
   </div>
+  <div class="msg" id="topMsg" role="status"></div>
+  <main id="adminMain"></main>
 
-  <section class="section" id="configSection" style="display:none;">
-    <div class="section-head"><span class="section-title">CAMP INFO</span></div>
-    <div id="configFields"></div>
-  </section>
-
-  <div class="controls" id="controls" style="display:none;">
-    <input type="text" class="search-box" id="search" placeholder="FILTER ITEMS...">
+  <div class="footer">
+    <span>VAULT STOCKROOM // ADMIN</span>
+    <span><a class="github-footer-link" href="https://github.com/i-01000011-01001010/vault-stockroom" target="_blank" rel="noopener">Vault Stockroom on GitHub</a></span>
+    <span class="legal">In-game trading only. No real-world money. Not affiliated with Bethesda.</span>
+    <span class="credit">Project by <a href="https://i-01000011-01001010.dev/" target="_blank" rel="noopener">i-01000011-01001010</a></span>
   </div>
-
-  <main id="catalog"></main>
 </div>
 
-<script src="catalog.js"></script>
+<div class="savebar" id="saveBar">
+  <span id="saveCount">0 unsaved changes</span>
+  <span class="spacer"></span>
+  <button type="button" class="btn" id="discardBtn">DISCARD</button>
+  <button type="button" class="btn primary" id="saveBtn">SAVE CHANGES</button>
+</div>
 <script src="admin.js"></script>
 </body>
 </html>

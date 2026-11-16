@@ -1,28 +1,29 @@
-name = "fo76-crafting-menu"
+name = "vault-stockroom"
 main = "src/index.js"
 compatibility_date = "2026-08-01"
 
-# Required so the "mimetext" package (used to build the outgoing email) can
-# use the Node built-ins it depends on. Without this, deploy fails with
-# "Could not resolve 'path'" or similar.
-compatibility_flags = ["nodejs_compat"]
-
-# Uncomment and set this to your own domain once it's attached in the
-# Cloudflare dashboard. Leave it out entirely to just use the default
-# *.workers.dev URL Cloudflare gives you on first deploy.
+# Optional: attach your own domain once it is set up in Cloudflare, otherwise
+# you get a *.workers.dev address on first deploy.
 # routes = [
-#   { pattern = "your-subdomain.yourdomain.com", custom_domain = true }
+#   { pattern = "stockroom.yourdomain.com", custom_domain = true }
 # ]
 
-# Static site files served from here
+# Static site files. Requests under /api/ always run the Worker first.
 [assets]
 directory = "./public"
 binding = "ASSETS"
+run_worker_first = ["/api/*"]
 
-# Cloudflare Email Routing, lets the Worker send mail without any
-# third-party API key. Your zone needs Email Routing enabled and the
-# address below added as a verified destination address, then update
-# RECIPIENT in src/index.js to match.
-[[send_email]]
-name = "SEB"
-destination_address = "you@example.com"
+# D1 database. Create it once with:
+#   npx wrangler d1 create vault-stockroom
+# then paste the database_id it prints below.
+[[d1_databases]]
+binding = "DB"
+database_name = "vault-stockroom"
+
+# Admin login runs through Cloudflare Access (see README). Fill these in after
+# you create the Access application. Leave empty and the admin stays locked.
+[vars]
+ACCESS_TEAM_DOMAIN = ""   # e.g. yourteam.cloudflareaccess.com
+ACCESS_AUD = ""           # Application Audience (AUD) tag from the Access application
+ADMIN_EMAILS = ""         # optional extra lock, comma separated emails allowed as admin

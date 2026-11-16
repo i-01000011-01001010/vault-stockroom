@@ -1,15 +1,24 @@
 {
-  "name": "fo76-crafting-menu",
+  "name": "vault-stockroom",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "description": "A self-hosted trade and collection board for Fallout 76 players.",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
-  },
-  "dependencies": {
-    "mimetext": "^3.0.24"
+    "deploy": "wrangler deploy && npm run db:migrate:remote",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "catalog:seed": "node scripts/gen-seed.mjs",
+    "test": "node --test test/auth.test.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "DB": {
+        "description": "Your D1 database. It is created for you and holds your settings and item choices. No setup needed."
+      }
+    }
   }
 }

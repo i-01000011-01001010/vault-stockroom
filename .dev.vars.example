@@ -1,0 +1,2 @@
+# For local testing only: copy this file to .dev.vars and add the line  DEV_ADMIN=1
+# Never set DEV_ADMIN on a deployed site. It only works on localhost anyway.
