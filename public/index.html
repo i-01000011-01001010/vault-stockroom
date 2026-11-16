@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C.A.M.P. Vendor Terminal</title>
+<title>Vault Stockroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -26,10 +30,11 @@
   <nav class="nav-row" id="navRow" style="display:none;">
     <a href="index.html" class="active">CATALOG</a>
     <a href="contact.html" id="contactLink" style="display:none;">CONTACT</a>
+    <span class="theme-slot" id="themeSlot"></span>
   </nav>
 
   <div class="controls" id="controls" style="display:none;">
-    <input type="text" class="search-box" id="search" placeholder="SEARCH ITEMS / MODS...">
+    <input type="text" class="search-box" id="search" placeholder="SEARCH ITEMS / MODS..." aria-label="Search items and mods">
     <label class="toggle" id="toggleLabel">
       <input type="checkbox" id="showUnavailable">
       SHOW OUT-OF-STOCK
@@ -39,8 +44,9 @@
   <main id="catalog"></main>
 
   <div class="footer">
-    <span>SELF-HOSTED CAMP VENDOR TERMINAL // <span id="lastUpdated"></span></span>
-    <span><a class="github-footer-link" href="https://github.com/i-01000011-01001010/fallout76-html-crafting-menu" target="_blank" rel="noopener">Fallout 76 HTML Crafting Menu on GitHub</a></span>
+    <span>VAULT STOCKROOM // <span id="lastUpdated"></span></span>
+    <span><a class="github-footer-link" href="https://github.com/i-01000011-01001010/vault-stockroom" target="_blank" rel="noopener">Vault Stockroom on GitHub</a></span>
+    <span class="legal">In-game trading only. No real-world money. Not affiliated with Bethesda.</span>
   </div>
 </div>
 
@@ -51,6 +57,7 @@
   <button type="button" class="primary" id="cartReviewBtn">REVIEW REQUEST &rarr;</button>
 </div>
 
+<script src="notice.js"></script>
 <script src="catalog.js"></script>
 <script src="cart.js"></script>
 <script src="script.js"></script>

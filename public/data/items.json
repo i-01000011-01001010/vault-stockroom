@@ -601,6 +601,18 @@
         }
       },
       {
+        "id": "m2-cryologists",
+        "name": "Cryologist's",
+        "material": "10 Floater Freezer Pus Sac",
+        "available": false,
+        "appliesTo": [
+          "weapon"
+        ],
+        "effects": {
+          "weapon": "+20% Cryo damage"
+        }
+      },
+      {
         "id": "m2-elementalist",
         "name": "Elementalist",
         "material": "Bobblehead: Endurance",
@@ -852,6 +864,18 @@
         "effects": {
           "armor": "+5% Action Point regeneration",
           "powerArmor": "+5% Action Point regeneration"
+        }
+      },
+      {
+        "id": "m2-pyro-technicians",
+        "name": "Pyro-Technician's",
+        "material": "10 Floater Flamer Pus Sac",
+        "available": false,
+        "appliesTo": [
+          "weapon"
+        ],
+        "effects": {
+          "weapon": "+20% Fire damage"
         }
       },
       {
@@ -1479,72 +1503,6 @@
     ],
     "4": [
       {
-        "id": "m4-haulers",
-        "name": "Hauler's",
-        "material": "5 Cloth",
-        "available": false,
-        "appliesTo": [
-          "armor",
-          "powerArmor"
-        ],
-        "effects": {
-          "armor": "+30 carry capacity",
-          "powerArmor": "+30 carry capacity"
-        }
-      },
-      {
-        "id": "m4-raging",
-        "name": "Raging",
-        "material": "1 Buffout",
-        "available": false,
-        "appliesTo": [
-          "armor",
-          "powerArmor"
-        ],
-        "effects": {
-          "armor": "+3% damage for 10 seconds after being hit",
-          "powerArmor": "+3% damage for 10 seconds after being hit"
-        }
-      },
-      {
-        "id": "m4-satiated",
-        "name": "Satiated",
-        "material": "5 Salt",
-        "available": false,
-        "appliesTo": [
-          "weapon"
-        ],
-        "effects": {
-          "weapon": "Kills restore hunger and thirst (Ghoul: restores feral meter)"
-        }
-      },
-      {
-        "id": "m4-tarnished",
-        "name": "Tarnished",
-        "material": "5 Fiberglass",
-        "available": false,
-        "appliesTo": [
-          "weapon"
-        ],
-        "effects": {
-          "weapon": "Up to +120% damage as durability decreases"
-        }
-      },
-      {
-        "id": "m4-vector",
-        "name": "Vector",
-        "material": "1 Magnifying Glass",
-        "available": false,
-        "appliesTo": [
-          "armor",
-          "powerArmor"
-        ],
-        "effects": {
-          "armor": "+10% V.A.T.S. accuracy vs distant targets",
-          "powerArmor": "+10% V.A.T.S. accuracy vs distant targets"
-        }
-      },
-      {
         "id": "m4-aegis",
         "name": "Aegis",
         "material": "5 Circuitry",
@@ -1669,6 +1627,20 @@
         }
       },
       {
+        "id": "m4-haulers",
+        "name": "Hauler's",
+        "material": "5 Cloth",
+        "available": false,
+        "appliesTo": [
+          "armor",
+          "powerArmor"
+        ],
+        "effects": {
+          "armor": "+30 carry capacity",
+          "powerArmor": "+30 carry capacity"
+        }
+      },
+      {
         "id": "m4-icemens",
         "name": "Icemen's",
         "material": "5 Pure Fluorescent Flux",
@@ -1781,6 +1753,20 @@
         }
       },
       {
+        "id": "m4-raging",
+        "name": "Raging",
+        "material": "1 Buffout",
+        "available": false,
+        "appliesTo": [
+          "armor",
+          "powerArmor"
+        ],
+        "effects": {
+          "armor": "+3% damage for 10 seconds after being hit",
+          "powerArmor": "+3% damage for 10 seconds after being hit"
+        }
+      },
+      {
         "id": "m4-rangers",
         "name": "Ranger's",
         "material": "1 Psychobuff",
@@ -1830,6 +1816,18 @@
         "effects": {
           "armor": "Sprint Action Point cost reduced by 20% per stack (up to -100%)",
           "powerArmor": "Sprint Action Point cost reduced by 20% per stack (up to -100%)"
+        }
+      },
+      {
+        "id": "m4-satiated",
+        "name": "Satiated",
+        "material": "5 Salt",
+        "available": false,
+        "appliesTo": [
+          "weapon"
+        ],
+        "effects": {
+          "weapon": "Kills restore hunger and thirst (Ghoul: restores feral meter)"
         }
       },
       {
@@ -1897,6 +1895,18 @@
         }
       },
       {
+        "id": "m4-tarnished",
+        "name": "Tarnished",
+        "material": "5 Fiberglass",
+        "available": false,
+        "appliesTo": [
+          "weapon"
+        ],
+        "effects": {
+          "weapon": "Up to +120% damage as durability decreases"
+        }
+      },
+      {
         "id": "m4-thrillseekers",
         "name": "Thrill-Seeker's",
         "material": "1 Adrenal Reaction Serum",
@@ -1906,6 +1916,20 @@
         ],
         "effects": {
           "weapon": "Reload/melee speed scales with kill streak"
+        }
+      },
+      {
+        "id": "m4-vector",
+        "name": "Vector",
+        "material": "1 Magnifying Glass",
+        "available": false,
+        "appliesTo": [
+          "armor",
+          "powerArmor"
+        ],
+        "effects": {
+          "armor": "+10% V.A.T.S. accuracy vs distant targets",
+          "powerArmor": "+10% V.A.T.S. accuracy vs distant targets"
         }
       },
       {

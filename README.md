@@ -1,9 +1,10 @@
-# Fallout 76 HTML Crafting Menu
+# Vault Stockroom
 
-A ROBCO-terminal-styled crafting/trade menu for your Fallout 76 C.A.M.P. List legendary mods
-(by star tier, with per-item materials and hover/tap descriptions), weapons (grouped by type),
-armor, apparel, under armor, and mutation serums, everything craftable and tradeable. Visitors
-check off what they want, and a sticky cart carries their picks into a contact form.
+A self-hosted trade and collection board for Fallout 76 players. List legendary mods (by star
+tier, with per-item materials and hover/tap descriptions), weapons (grouped by type), armor,
+apparel, under armor, and mutation serums, everything you can craft and trade. Visitors check off
+what they want, and a sticky cart carries their picks into a contact form. Pick a look that suits
+you: two clean themes (light and dark) or two terminal themes (amber and green).
 
 Not affiliated with Bethesda Softworks or Fallout 76. Fan-made tool, MIT licensed, do with it
 what you like.
@@ -117,6 +118,32 @@ The contact form on this branch opens the visitor's email client via a `mailto:`
 pre-filled with their message instead of sending it server-side. It's less seamless than the
 Workers version but needs nothing running on your end.
 
+## Themes and display
+
+Visitors pick a theme from the dropdown next to the CATALOG / CONTACT links. Their choice is
+remembered in their own browser.
+
+| Theme | Look |
+|---|---|
+| **Auto (clean)** | Clean layout that follows the visitor's light/dark device setting |
+| **Daybreak** | Clean, light |
+| **Gunmetal** | Clean, dark |
+| **Amber Phosphor** | Terminal look, amber text |
+| **Green Phosphor** | Terminal look, green text (easier on the eyes for long sessions) |
+
+The terminal themes also get a **CRT EFFECTS** checkbox that turns the scanlines, glow, and
+flicker on or off. The clean themes skip the typed boot sequence entirely.
+
+To change what first-time visitors see, edit `DEFAULT_THEME` at the top of `public/theme.js`
+(`"auto"` by default). All colours live as variables at the top of `public/style.css`, so adding
+your own theme is one more block of variables.
+
+## First-visit notice
+
+The first time someone opens the site they see a short "in-game trading only" notice and click
+**I UNDERSTAND** to continue. A one-line version also stays in the footer. Reword or disable it
+with the `notice` block in `config.json` (see Data model below).
+
 ## Editing what's available
 
 Open `public/admin.html` (through a local server, or after deploying, it's just another page
@@ -145,6 +172,11 @@ You can also hand-edit the JSON directly. See **Data model** below for the shape
   "trade": {
     "acceptingCaps": true,          // set false to show a "not accepting caps" banner instead
     "note": "Optional note shown near the top of the page and on the contact page."
+  },
+  "notice": {
+    "enabled": true,                // first-visit "in-game trading only" notice, false turns it off
+    "title": "Optional custom title.",
+    "text": "Optional custom wording, the built-in text is used when this is omitted."
   },
   "contact": {
     "enabled": true,                // hides the CONTACT nav link + form entirely when false
@@ -190,14 +222,13 @@ of how many item types it applies to:
     "weapon": "+10% damage per kill while on a kill streak",
     "armor": "+10 Damage and Energy Resistance per kill while on a kill streak (max 10 stacks)",
     "powerArmor": "+10 Damage and Energy Resistance per kill while on a kill streak (max 10 stacks)"
-  },
-  "wikiUrl": "https://fallout.fandom.com/wiki/Adrenal"
+  }
 }
 ```
 
 `appliesTo` decides which of the three MODS subsections (Weapon Mods, Armor Mods, Power Armor
 Mods) a mod shows up in. `effects` backs the hover/tap tooltip on each mod, one line of text per
-applicable type, with a link out to the Fallout Wiki. A mod that applies to all three is still one
+applicable type. A mod that applies to all three is still one
 row in admin, checked once.
 
 Any section or subsection with zero available items just doesn't render on the public page, if

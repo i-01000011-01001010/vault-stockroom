@@ -1,10 +1,12 @@
 const BOOT_LINES = [
-  "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL",
+  "VAULT STOCKROOM TERMLINK PROTOCOL",
   "LOADING CONFIG.JSON... OK",
   "OPENING CONTACT CHANNEL...",
 ];
 
 function typeBoot(cb) {
+  // The typed boot sequence is a terminal-theme flourish, skip it in the clean themes
+  if (window.VS_THEME && window.VS_THEME.family() !== "terminal") { cb(); return; }
   const el = document.getElementById("boot");
   let out = "";
   let li = 0;
@@ -110,7 +112,7 @@ function attachForm(config) {
       return;
     }
 
-    const subject = `C.A.M.P. vendor request, ${payload.ign || payload.discord || "new contact"}`;
+    const subject = `Trade request, ${payload.ign || payload.discord || "new contact"}`;
     const body = buildEmailBody(payload);
     const mailto = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -128,6 +130,7 @@ function attachForm(config) {
     try {
       const config = await loadConfig();
       renderHeader(config);
+      if (window.showNoticeIfNeeded) window.showNoticeIfNeeded(config);
       if (config.contact && config.contact.enabled) {
         document.getElementById("enabledSection").style.display = "";
         document.getElementById("contactPrompt").textContent = config.contact.prompt || "";
@@ -137,7 +140,9 @@ function attachForm(config) {
         document.getElementById("disabledSection").style.display = "";
       }
     } catch (err) {
-      document.getElementById("boot").textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
+      const bootEl = document.getElementById("boot");
+      bootEl.classList.add("show-error");
+      bootEl.textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
       console.error(err);
     }
   });

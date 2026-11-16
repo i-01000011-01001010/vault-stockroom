@@ -3,12 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vendor Terminal :: Admin Editor</title>
+<title>Vault Stockroom :: Admin Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
 <div class="wrap">
-  <div class="boot">ROBCO INDUSTRIES (TM) TERMLINK<br>ADMIN / STOCK EDITOR (LOCAL ONLY, NOT PUBLISHED)</div>
+  <nav class="nav-row">
+    <strong>VAULT STOCKROOM // ADMIN / STOCK EDITOR (LOCAL ONLY, NOT PUBLISHED)</strong>
+    <span class="theme-slot" id="themeSlot"></span>
+  </nav>
 
   <div class="admin-panel">
     <p class="tagline">
@@ -35,7 +42,7 @@
   </section>
 
   <div class="controls" id="controls" style="display:none;">
-    <input type="text" class="search-box" id="search" placeholder="FILTER ITEMS...">
+    <input type="text" class="search-box" id="search" placeholder="FILTER ITEMS..." aria-label="Filter items">
   </div>
 
   <main id="catalog"></main>

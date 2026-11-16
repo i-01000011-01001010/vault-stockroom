@@ -1,5 +1,5 @@
 const BOOT_LINES = [
-  "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL",
+  "VAULT STOCKROOM TERMLINK PROTOCOL",
   "INITIALIZING VENDOR DATABASE...",
   "LOADING CONFIG.JSON... OK",
   "LOADING ITEMS.JSON... OK",
@@ -9,6 +9,8 @@ const BOOT_LINES = [
 let STATE = { config: null, items: null, filterText: "", showUnavailable: false };
 
 function typeBoot(cb) {
+  // The typed boot sequence is a terminal-theme flourish, skip it in the clean themes
+  if (window.VS_THEME && window.VS_THEME.family() !== "terminal") { cb(); return; }
   const el = document.getElementById("boot");
   let out = "";
   let li = 0;
@@ -232,11 +234,14 @@ function attachControls() {
     try {
       await loadData();
       renderHeader();
+      if (window.showNoticeIfNeeded) window.showNoticeIfNeeded(STATE.config);
       renderCatalog();
       attachControls();
       updateCartBar();
     } catch (err) {
-      document.getElementById("boot").textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
+      const bootEl = document.getElementById("boot");
+      bootEl.classList.add("show-error");
+      bootEl.textContent += "\n\n!! ERROR LOADING DATA: " + err.message;
       console.error(err);
     }
   });

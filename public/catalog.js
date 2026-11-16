@@ -130,17 +130,17 @@ function buildItemNode(it, opts) {
   }
 
   // Public / read-only rendering
-  const div = document.createElement("div");
+  const canSelect = !!(opts.selectable && it.available);
+  const div = document.createElement(canSelect ? "label" : "div");
   div.className = "item " + (it.available ? "available" : "unavailable");
 
-  const bullet = document.createElement("span");
-  bullet.className = "bullet";
-  div.appendChild(bullet);
+  div.appendChild(buildGutter(it, opts));
 
   const body = document.createElement("span");
   body.className = "item-body";
 
   const nameLine = document.createElement("span");
+  nameLine.className = "item-name";
   nameLine.textContent = it.name;
   body.appendChild(nameLine);
 
@@ -158,20 +158,33 @@ function buildItemNode(it, opts) {
   }
   div.appendChild(body);
 
+  return div;
+}
+
+/* Leading cell of a public row: the select checkbox when the item is available,
+   an X marker when it is not, so names always line up in one column. */
+function buildGutter(it, opts) {
+  const gutter = document.createElement("span");
+  gutter.className = "item-gutter";
   if (opts.selectable && it.available) {
-    const selWrap = document.createElement("label");
-    selWrap.className = "item-select";
     const selCb = document.createElement("input");
     selCb.type = "checkbox";
     selCb.checked = opts.selectedIds ? opts.selectedIds.has(it.id) : false;
+    selCb.setAttribute("aria-label", "Select " + it.name);
     selCb.addEventListener("change", () => {
       if (opts.onSelectToggle) opts.onSelectToggle(it, selCb.checked);
     });
-    selWrap.appendChild(selCb);
-    div.appendChild(selWrap);
+    // Keep a click on the checkbox from also opening a mod tooltip
+    gutter.addEventListener("click", e => e.stopPropagation());
+    gutter.appendChild(selCb);
+  } else if (!it.available) {
+    const mark = document.createElement("span");
+    mark.className = "off-mark";
+    mark.setAttribute("aria-hidden", "true");
+    mark.textContent = "\u2715";
+    gutter.appendChild(mark);
   }
-
-  return div;
+  return gutter;
 }
 
 /**
@@ -299,13 +312,12 @@ function buildModNode(it, opts) {
   div.className = "item mod-item " + (it.available ? "available" : "unavailable");
   div.tabIndex = 0;
 
-  const bullet = document.createElement("span");
-  bullet.className = "bullet";
-  div.appendChild(bullet);
+  div.appendChild(buildGutter(it, opts));
 
   const body = document.createElement("span");
   body.className = "item-body";
   const nameLine = document.createElement("span");
+  nameLine.className = "item-name";
   nameLine.textContent = it.name;
   body.appendChild(nameLine);
   if (it.material) {
@@ -315,20 +327,6 @@ function buildModNode(it, opts) {
     body.appendChild(mat);
   }
   div.appendChild(body);
-
-  if (opts.selectable && it.available) {
-    const selWrap = document.createElement("label");
-    selWrap.className = "item-select";
-    selWrap.addEventListener("click", e => e.stopPropagation());
-    const selCb = document.createElement("input");
-    selCb.type = "checkbox";
-    selCb.checked = opts.selectedIds ? opts.selectedIds.has(it.id) : false;
-    selCb.addEventListener("change", () => {
-      if (opts.onSelectToggle) opts.onSelectToggle(it, selCb.checked);
-    });
-    selWrap.appendChild(selCb);
-    div.appendChild(selWrap);
-  }
 
   attachModTooltip(div, it);
   return div;
