@@ -1,5 +1,8 @@
 name: Deploy
 
+# Optional. Only runs if you add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
+# as repository secrets. If you used the Deploy to Cloudflare button, you do not need it.
+
 on:
   push:
     branches:
@@ -8,13 +11,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
+      - name: Check for Cloudflare secrets
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "No Cloudflare secrets set, skipping."; fi
       - uses: actions/checkout@v5
+        if: env.CLOUDFLARE_API_TOKEN != ''
       - uses: actions/setup-node@v4
+        if: env.CLOUDFLARE_API_TOKEN != ''
         with:
           node-version: 22
       - run: npm install
+        if: env.CLOUDFLARE_API_TOKEN != ''
       - name: Apply database migrations, then deploy
+        if: env.CLOUDFLARE_API_TOKEN != ''
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
