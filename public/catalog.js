@@ -161,6 +161,19 @@ function buildItemNode(it, opts) {
   return div;
 }
 
+/* What goes into a request for this row. Mods always carry their star tier and the
+   kind of gear they are for, so "Agility" can never be mistaken for another star level. */
+const MOD_TYPE_LABELS = { weapon: "weapon", armor: "armor", powerArmor: "power armor" };
+function requestEntry(it, opts) {
+  if (it.tier && opts.modType) {
+    return {
+      id: it.id + "@" + opts.modType,
+      name: it.tier + "-star " + it.name + " (" + (MOD_TYPE_LABELS[opts.modType] || opts.modType) + " mod)",
+    };
+  }
+  return { id: it.id, name: it.name };
+}
+
 /* Leading cell of a public row: the select checkbox when the item is available,
    an X marker when it is not, so names always line up in one column. */
 function buildGutter(it, opts) {
@@ -169,10 +182,11 @@ function buildGutter(it, opts) {
   if (opts.selectable && it.available) {
     const selCb = document.createElement("input");
     selCb.type = "checkbox";
-    selCb.checked = opts.selectedIds ? opts.selectedIds.has(it.id) : false;
-    selCb.setAttribute("aria-label", "Select " + it.name);
+    const pick = requestEntry(it, opts);
+    selCb.checked = opts.selectedIds ? opts.selectedIds.has(pick.id) : false;
+    selCb.setAttribute("aria-label", "Select " + pick.name);
     selCb.addEventListener("change", () => {
-      if (opts.onSelectToggle) opts.onSelectToggle(it, selCb.checked);
+      if (opts.onSelectToggle) opts.onSelectToggle(pick, selCb.checked);
     });
     // Keep a click on the checkbox from also opening a mod tooltip
     gutter.addEventListener("click", e => e.stopPropagation());

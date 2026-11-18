@@ -37,7 +37,7 @@ function cleanSite(input) {
     inGameName: str(input.inGameName, 40, { label: "In-game name" }),
     discord: str(input.discord, 40, { label: "Discord" }),
     server: str(input.server, 40, { label: "Platform" }),
-    tagline: str(input.tagline, 300, { label: "Tagline" }),
+    tagline: str(input.tagline, 800, { label: "Tagline" }),
     note: str(input.note, 300, { label: "Note" }),
     modsNote: str(input.modsNote, 400, { label: "Mods note" }),
     trade: {

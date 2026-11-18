@@ -214,7 +214,7 @@
     const fields = [
       ["campName", "CAMP NAME", s.campName, 80], ["inGameName", "IN-GAME NAME", s.inGameName, 40],
       ["discord", "DISCORD", s.discord, 40], ["server", "PLATFORM", s.server, 40],
-      ["tagline", "TAGLINE", s.tagline, 300], ["note", "NOTE UNDER THE TAGLINE", s.note, 300],
+      ["tagline", "TAGLINE", s.tagline, 800], ["note", "NOTE UNDER THE TAGLINE", s.note, 300],
       ["modsNote", "NOTE ON THE MODS SECTION", s.modsNote, 400],
     ];
     const inputs = {};
